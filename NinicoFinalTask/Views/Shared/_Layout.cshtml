@@ -1,0 +1,542 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ninico -  Minimal eCommerce HTML Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
+    <!-- Scroll-top -->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <i class="fas fa-angle-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+    <!-- header-area-start -->
+    <header>
+        <div class="header-top tertiary-header-top space-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-12 col-md-12 ">
+                        <div class="header-welcome-text">
+                            <span>Welcome to our international shop! Enjoy free shipping on orders $100 & up.</span>
+                            <a href="#">Shop Now<i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 d-none d-xl-block">
+                        <div class="headertoplag d-flex align-items-center justify-content-end">
+                            <div class="headertoplag__lang">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fal fa-user"></i> Account</a>
+                                        <a class="order-tick" href="#"><i class="fal fa-plane-departure"></i>Track Your Order</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="menu-top-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-behance"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logo-area green-logo-area mt-30 d-none d-xl-block">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-2 col-lg-3">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-lg-9">
+                        <div class="header-meta-info d-flex align-items-center justify-content-between">
+                            <div class="header-search-bar">
+                                <form action="#">
+                                    <div class="search-info p-relative">
+                                        <button class="header-search-icon"><i class="fal fa-search"></i></button>
+                                        <input type="text" placeholder="Search products...">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="header-meta header-language d-flex align-items-center">
+                                <div class="header-meta__lang">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="assets/img/icon/lang-flag.png" alt="flag">
+                                                English
+                                                <span><i class="fal fa-angle-down"></i></span>
+                                            </a>
+                                            <ul class="header-meta__lang-submenu">
+                                                <li>
+                                                    <a href="#">Arabic</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Spanish</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Mandarin</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="header-meta__value mr-15">
+                                    <select>
+                                        <option>USD</option>
+                                        <option>YEAN</option>
+                                        <option>EURO</option>
+                                    </select>
+                                </div>
+                                <div class="header-meta__social d-flex align-items-center ml-25">
+                                    <button class="header-cart p-relative tp-cart-toggle">
+                                        <i class="fal fa-shopping-cart"></i>
+                                        <span>2</span>
+                                    </button>
+                                    <a href="sign-in.html"><i class="fal fa-user"></i></a>
+                                    <a href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menu-area tertiary-main-menu mt-25 d-none d-xl-block">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-2 col-lg-3">
+                        <div class="cat-menu__category p-relative">
+                            <a data-bs-toggle="collapse" href="#collapsecategory" role="button" aria-expanded="false"
+                               aria-controls="collapsecategory"><i class="fal fa-bars"></i>Categories</a>
+                            <div class="category-menu collapse show" id="collapsecategory">
+                                <ul class="cat-menu__list">
+                                    <li><a href="shop-2.html"><i class="fal fa-chair"></i> Furniture</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="shop.html">
+                                            <i class="far fa-campfire"></i>
+                                            Cooking
+                                        </a>
+                                        <ul class="submenu">
+                                            <li><a href="shop-2.html">Chair</a></li>
+                                            <li><a href="shop-2.html">Table</a></li>
+                                            <li><a href="shop.html">Wooden</a></li>
+                                            <li><a href="shop.html">furniture</a></li>
+                                            <li><a href="shop.html">Clock</a></li>
+                                            <li><a href="shop.html">Gifts</a></li>
+                                            <li><a href="shop.html">Crafts</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="shop-2.html"><i class="fal fa-shoe-prints"></i>Accessories</a></li>
+                                    <li><a href="shop-2.html"><i class="fal fa-tshirt"></i>Fashion</a></li>
+                                    <li><a href="shop-2.html"><i class="fal fa-clock"></i>Clocks</a></li>
+                                    <li><a href="shop-2.html"><i class="fal fa-light-ceiling"></i>Lighting</a></li>
+                                    <li><a href="shop-2.html"><i class="fal fa-gift"></i>Toys</a></li>
+                                    <li><a href="shop-2.html"><i class="fal fa-basketball-ball"></i>Hand Made</a></li>
+                                    <li><a href="shop-2.html"><i class="fal fa-gift"></i>Minimalism</a></li>
+                                    <li><a href="shop-2.html"><i class="fal fa-lightbulb-dollar"></i>Electronics</a></li>
+                                    <li><a href="shop-2.html"><i class="fal fa-car-alt"></i>Cars</a></li>
+                                </ul>
+                                <div class="coupon-offer d-flex align-items-center justify-content-between">
+                                    <span>Coupon: <a href="shop.html">Offers50</a></span>
+                                    <a href="#"> <i class="fal fa-copy"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-6">
+                        <div class="main-menu">
+                            <nav id="mobile-menu">
+                                <ul>
+                                    <li class="has-dropdown">
+                                        <a href="index.html">Home</a>
+                                        <ul class="submenu">
+                                            <li><a href="index.html">Wooden  Home</a></li>
+                                            <li><a href="index-2.html">Fashion Home</a></li>
+                                            <li><a href="index-3.html">Furniture Home</a></li>
+                                            <li><a href="index-4.html">Cosmetics Home</a></li>
+                                            <li><a href="index-5.html">Food Grocery</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="shop.html">Shop</a>
+                                        <ul class="submenu">
+                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="shop-2.html">Shop 2</a></li>
+                                            <li><a href="shop-details.html">Shop Details </a></li>
+                                            <li><a href="shop-details-2.html">Shop Details 2</a></li>
+                                            <li><a href="shop-location.html">Shop Location</a></li>
+                                            <li><a href="cart.html">Cart</a></li>
+                                            <li><a href="sign-in.html">Sign In</a></li>
+                                            <li><a href="checkout.html">Checkout</a></li>
+                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                            <li><a href="track.html">Product Track</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown has-megamenu">
+                                        <a href="about.html">Pages</a>
+                                        <ul class="submenu mega-menu">
+                                            <li>
+                                                <a class="mega-menu-title">Page layout</a>
+                                                <ul>
+                                                    <li><a href="shop.html">Shop filters v1</a></li>
+                                                    <li><a href="shop-2.html">Shop filters v2</a></li>
+                                                    <li><a href="shop-details.html">Shop sidebar</a></li>
+                                                    <li><a href="shop-details-2.html">Shop Right sidebar</a></li>
+                                                    <li><a href="shop-location.html">Shop List view</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="mega-menu-title">Page layout</a>
+                                                <ul>
+                                                    <li><a href="about.html">About</a></li>
+                                                    <li><a href="cart.html">Cart</a></li>
+                                                    <li><a href="checkout.html">Checkout</a></li>
+                                                    <li><a href="sign-in.html">Sign In</a></li>
+                                                    <li><a href="sign-in.html">Log In</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="mega-menu-title">Page type</a>
+                                                <ul>
+                                                    <li><a href="track.html">Product Track</a></li>
+                                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                                    <li><a href="error.html">404 / Error</a></li>
+                                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="blog.html">Blog</a>
+                                        <ul class="submenu">
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3">
+                        <div class="menu-contact">
+                            <ul>
+                                <li>
+                                    <div class="menu-contact__item">
+                                        <div class="menu-contact__icon">
+                                            <i class="fal fa-phone"></i>
+                                        </div>
+                                        <div class="menu-contact__info">
+                                            <a href="tel:0123456">908. 408. 501. 89</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-contact__item">
+                                        <div class="menu-contact__icon">
+                                            <i class="fal fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="menu-contact__info">
+                                            <a href="shop-location.html">Find Store</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-area-end -->
+    <!-- header-xl-sticky-area -->
+    <div id="header-sticky" class="logo-area tp-sticky-one mainmenu-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-2 col-lg-3">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="main-menu">
+                        <nav>
+                            <ul>
+                                <li class="has-dropdown">
+                                    <a href="index.html">Home</a>
+                                    <ul class="submenu">
+                                        <li><a href="index.html">Wooden  Home</a></li>
+                                        <li><a href="index-2.html">Fashion Home</a></li>
+                                        <li><a href="index-3.html">Furniture Home</a></li>
+                                        <li><a href="index-4.html">Cosmetics Home</a></li>
+                                        <li><a href="index-5.html">Food Grocery</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="shop.html">Shop</a>
+                                    <ul class="submenu">
+                                        <li><a href="shop.html">Shop</a></li>
+                                        <li><a href="shop-2.html">Shop 2</a></li>
+                                        <li><a href="shop-details.html">Shop Details </a></li>
+                                        <li><a href="shop-details-2.html">Shop Details 2</a></li>
+                                        <li><a href="shop-location.html">Shop Location</a></li>
+                                        <li><a href="cart.html">Cart</a></li>
+                                        <li><a href="sign-in.html">Sign In</a></li>
+                                        <li><a href="checkout.html">Checkout</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                        <li><a href="track.html">Product Track</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-dropdown has-megamenu">
+                                    <a href="about.html">Pages</a>
+                                    <ul class="submenu mega-menu">
+                                        <li>
+                                            <a class="mega-menu-title">Page layout</a>
+                                            <ul>
+                                                <li><a href="shop.html">Shop filters v1</a></li>
+                                                <li><a href="shop-2.html">Shop filters v2</a></li>
+                                                <li><a href="shop-details.html">Shop sidebar</a></li>
+                                                <li><a href="shop-details-2.html">Shop Right sidebar</a></li>
+                                                <li><a href="shop-location.html">Shop List view</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="mega-menu-title">Page layout</a>
+                                            <ul>
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="cart.html">Cart</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                                <li><a href="sign-in.html">Sign In</a></li>
+                                                <li><a href="sign-in.html">Log In</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="mega-menu-title">Page type</a>
+                                            <ul>
+                                                <li><a href="track.html">Product Track</a></li>
+                                                <li><a href="wishlist.html">Wishlist</a></li>
+                                                <li><a href="error.html">404 / Error</a></li>
+                                                <li><a href="coming-soon.html">Coming Soon</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="blog.html">Blog</a>
+                                    <ul class="submenu">
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-9">
+                    <div class="header-meta-info d-flex align-items-center justify-content-end">
+                        <div class="header-meta__social  d-flex align-items-center">
+                            <button class="header-cart p-relative tp-cart-toggle">
+                                <i class="fal fa-shopping-cart"></i>
+                                <span class="tp-product-count">2</span>
+                            </button>
+                            <a href="sign-in.html"><i class="fal fa-user"></i></a>
+                            <a href="wishlist.html"><i class="fal fa-heart"></i></a>
+                        </div>
+                        <div class="header-meta__search-5 ml-25">
+                            <div class="header-search-bar-5">
+                                <form action="#">
+                                    <div class="search-info-5 p-relative">
+                                        <button class="header-search-icon-5"><i class="fal fa-search"></i></button>
+                                        <input type="text" placeholder="Search products...">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            @RenderBody()
+
+            <!-- main-area-end -->
+            <!-- footer-area-start -->
+            <footer>
+                <div class="footer-area theme-bg green-footer pt-65">
+                    <div class="container">
+                        <div class="main-footer pb-15 mb-30">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="footer-widget footer-col-1 mb-40">
+                                        <div class="footer-logo mb-30">
+                                            <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
+                                        </div>
+                                        <div class="footer-content">
+                                            <p>
+                                                Elegant pink origami design three <br> dimensional view and decoration co-exist. <br>
+                                                Great for adding a decorative touch to <br> any room’s decor.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="footer-widget footer-col-2 ml-30 mb-40">
+                                        <h4 class="footer-widget__title mb-30">Information</h4>
+                                        <div class="footer-widget__links">
+                                            <ul>
+                                                <li><a href="#">Custom Service</a></li>
+                                                <li><a href="#">FAQs</a></li>
+                                                <li><a href="track.html">Ordering Tracking</a></li>
+                                                <li><a href="contact.html">Contacts</a></li>
+                                                <li><a href="#">Events</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="footer-widget footer-col-3 mb-40">
+                                        <h4 class="footer-widget__title mb-30">My Account</h4>
+                                        <div class="footer-widget__links">
+                                            <ul>
+                                                <li><a href="contact.html">Delivery Infomation</a></li>
+                                                <li><a href="#">Privacy Policy</a></li>
+                                                <li><a href="#">Discount</a></li>
+                                                <li><a href="#">Custom Service</a></li>
+                                                <li><a href="#">Terms & Condition</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                    <div class="footer-widget footer-col-4 mb-40">
+                                        <h4 class="footer-widget__title mb-30">Social Network</h4>
+                                        <div class="footer-widget__links">
+                                            <ul>
+                                                <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+                                                <li><a href="#"><i class="fab fa-dribbble"></i>Dribbble</a></li>
+                                                <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+                                                <li><a href="#"><i class="fab fa-behance"></i>Behance</a></li>
+                                                <li><a href="#"><i class="fab fa-youtube"></i>Youtube</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <div class="footer-widget footer-col-5 mb-40">
+                                        <h4 class="footer-widget__title mb-30">Get Newsletter</h4>
+                                        <p>Get on the list and get 10% off your first order!</p>
+                                        <div class="footer-widget__newsletter">
+                                            <form action="#">
+                                                <input type="email" placeholder="Enter email address">
+                                                <button class="footer-widget__fw-news-btn tpsecondary-btn">
+                                                    Subscribe Now<i class="fal fa-long-arrow-right"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-cta pb-20">
+                            <div class="row justify-content-between">
+                                <div class="col-xl-6 col-lg-4 col-md-4 col-sm-6">
+                                    <div class="footer-cta__contact">
+                                        <div class="footer-cta__icon">
+                                            <i class="far fa-phone"></i>
+                                        </div>
+                                        <div class="footer-cta__text">
+                                            <a href="tel:0123456">980. 029. 666. 99</a>
+                                            <span>Working 8:00 - 22:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-8 col-md-8 col-sm-6">
+                                    <div class="footer-cta__source">
+                                        <div class="footer-cta__source-content">
+                                            <h4 class="footer-cta__source-title">Download App on Mobile</h4>
+                                            <p>15% discount on your first purchase</p>
+                                        </div>
+                                        <div class="footer-cta__source-thumb">
+                                            <a href="#"><img src="assets/img/footer/f-google.jpg" alt="google"></a>
+                                            <a href="#"><img src="assets/img/footer/f-app.jpg" alt="app"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-7 col-md-5 col-sm-6">
+                                    <div class="footer-copyright__content">
+                                        <span>
+                                            Copyright 2022 <a href="index.html">©Ninico</a>. All rights reserved. Powered by <a href="https://themeforest.net/user/theme_pure/portfolio">Theme_Pure</a>.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-5 col-md-7 col-sm-6">
+                                    <div class="footer-copyright__brand">
+                                        <img src="assets/img/footer/f-brand-icon-01.png" alt="footer-brand">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer-area-end -->
+            <!-- JS here -->
+            <script src="assets/js/jquery.js"></script>
+            <script src="assets/js/waypoints.js"></script>
+            <script src="assets/js/bootstrap.bundle.min.js"></script>
+            <script src="assets/js/swiper-bundle.js"></script>
+            <script src="assets/js/slick.js"></script>
+            <script src="assets/js/magnific-popup.js"></script>
+            <script src="assets/js/nice-select.js"></script>
+            <script src="assets/js/counterup.js"></script>
+            <script src="assets/js/wow.js"></script>
+            <script src="assets/js/isotope-pkgd.js"></script>
+            <script src="assets/js/imagesloaded-pkgd.js"></script>
+            <script src="assets/js/countdown.js"></script>
+            <script src="assets/js/ajax-form.js"></script>
+            <script src="assets/js/meanmenu.js"></script>
+            <script src="assets/js/main.js"></script>
+</body>
+
+</html>
