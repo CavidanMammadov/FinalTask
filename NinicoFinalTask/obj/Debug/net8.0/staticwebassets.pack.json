@@ -8949,6 +8949,18 @@
       "PackagePath": "staticwebassets\\assets\\scss\\utils\\_typography.scss"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\sliders\\p5u1x4lv.fhp.png",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\p5u1x4lv.fhp.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\sliders\\yfwalegl.p5h.png",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\yfwalegl.p5h.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\sliders\\zlm4ixe1.ywb.png",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\zlm4ixe1.ywb.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.NinicoFinalTask.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
