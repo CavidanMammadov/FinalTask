@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fWb7HAXgylcUHq9vpGu4xzjoImOyzWGDzMxHqgGtAlo=",
+  "Hash": "u/lfQtXgIRHVs5Phl+tINWSDzLsuS7CsYB/VJhMoezA=",
   "Source": "NinicoFinalTask",
   "BasePath": "_content/NinicoFinalTask",
   "Mode": "Default",
@@ -42556,6 +42556,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\sliders\\2hxlzr4s.w23.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\sliders\\2mt10i5k.4ga.jpg",
+      "SourceId": "NinicoFinalTask",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
+      "BasePath": "_content/NinicoFinalTask",
+      "RelativePath": "imgs/sliders/2mt10i5k.4ga.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\sliders\\2mt10i5k.4ga.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\sliders\\gazknbd0.ttd.jpg",
