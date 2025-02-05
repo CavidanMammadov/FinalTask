@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<SliderItemVM>
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -192,95 +193,46 @@
 <!-- main-area-start -->
 <main>
 
-    <!-- slider-area-start -->
     <section class="slider-area">
         <div class="secondary-slider p-relative">
             <div class="swiper-container greenslider-active">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide slider-bg-2 slider-3">
-                        <div class="container">
-                            <div class="row p-relative justify-content-xl-end align-items-center">
-                                <div class="col-xl-5 col-lg-6 col-md-6">
-                                    <div class="tpslidertwo__content slider-content-3">
-                                        <h3 class="tpslidertwo__title mb-10">Wooden <br> Lounge Furniture</h3>
-                                        <p>New Modern Stylist Fashionable Women's Wear holder</p>
-                                        <div class="tpslidertwo__slide-btn d-flex align-items-center ">
-                                            <a class="tp-btn banner-animation mr-25" href="shop.html">
-                                                Shop Now <i class="fal fa-long-arrow-right"></i>
-                                            </a>
-                                            <span>Start From <br> <b>$99.99</b></span>
+                    @foreach (var item in Model)
+                    {
+                        <div class="swiper-slide slider-bg-2 slider-3">
+                            <div class="container">
+                                <div class="row p-relative justify-content-xl-end align-items-center">
+                                    <div class="col-xl-5 col-lg-6 col-md-6">
+                                        <div class="tpslidertwo__content slider-content-3">
+                                            <h3 class="tpslidertwo__title mb-10">@item.Title</h3>
+                                            <p>@item.SubTitle</p>
+                                            <div class="tpslidertwo__slide-btn d-flex align-items-center">
+                                                <a class="tp-btn banner-animation mr-25" href="@item.Link">
+                                                    Shop Now <i class="fal fa-long-arrow-right"></i>
+                                                </a>
+                                                <span>Start From <br> <b>$@item.StartPrice</b></span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-xl-5 col-lg-6 col-md-6 d-none d-md-block">
-                                    <div class="tpsliderthree__img p-relative text-end pt-55">
-                                        <img src="assets/img/slider/slider-04.png" alt="">
-                                        <div class="tpslidertwo__img-shape">
-                                            <img src="assets/img/slider/fasion-tag-02.png" alt="tag">
+                                    <div class="col-xl-5 col-lg-6 col-md-6 d-none d-md-block">
+                                        <div class="tpsliderthree__img p-relative text-end pt-55">
+                                            <img src="~/imgs/sliders/@item.ImageUrl" alt="">
+                                            <div class="tpslidertwo__img-shape">
+                                                <img src="~/imgs/sliders/@item.ImageUrl" alt="tag">
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slider-bg-2 slider-3">
-                        <div class="container">
-                            <div class="row p-relative justify-content-xl-end align-items-center">
-                                <div class="col-xl-5 col-lg-6 col-md-6">
-                                    <div class="tpslidertwo__content slider-content-3">
-                                        <h3 class="tpslidertwo__title mb-10">Wooden <br> Lounge Chair</h3>
-                                        <p>New Modern Stylist Fashionable Women's Wear holder</p>
-                                        <div class="tpslidertwo__slide-btn d-flex align-items-center ">
-                                            <a class="tp-btn banner-animation mr-25" href="shop-2.html">
-                                                Shop Now <i class="fal fa-long-arrow-right"></i>
-                                            </a>
-                                            <span>Start From <br> <b>$99.99</b></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-5 col-lg-6 col-md-6 d-none d-md-block">
-                                    <div class="tpsliderthree__img p-relative text-end pt-55">
-                                        <img src="assets/img/slider/slider-05.png" alt="">
-                                        <div class="tpslidertwo__img-shape">
-                                            <img src="assets/img/slider/fasion-tag-02.png" alt="tag">
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide slider-bg-2 slider-3">
-                        <div class="container">
-                            <div class="row p-relative justify-content-xl-end align-items-center">
-                                <div class="col-xl-5 col-lg-6 col-md-6">
-                                    <div class="tpslidertwo__content slider-content-3">
-                                        <h3 class="tpslidertwo__title mb-10">Wooden <br> Houston Furniture</h3>
-                                        <p>New Modern Stylist Fashionable Women's Wear holder</p>
-                                        <div class="tpslidertwo__slide-btn d-flex align-items-center ">
-                                            <a class="tp-btn banner-animation mr-25" href="shop-2.html">
-                                                Shop Now <i class="fal fa-long-arrow-right"></i>
-                                            </a>
-                                            <span>Start From <br> <b>$99.99</b></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-5 col-lg-6 col-md-6 d-none d-md-block">
-                                    <div class="tpsliderthree__img p-relative text-end pt-55">
-                                        <img src="assets/img/slider/slider-06.png" alt="">
-                                        <div class="tpslidertwo__img-shape">
-                                            <img src="assets/img/slider/fasion-tag-02.png" alt="tag">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
             <div class="greenslider-pagination"></div>
         </div>
     </section>
-    <!-- slider-area-end -->
+
     <!-- services-area-start -->
     <section class="services-area pt-70">
         <div class="container">

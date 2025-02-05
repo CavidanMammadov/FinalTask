@@ -1,14 +1,26 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using NinicoFinalTask.DataAcces;
 using NinicoFinalTask.Models;
+using NinicoFinalTask.ViewModel.Slider;
 using System.Diagnostics;
 
 namespace NinicoFinalTask.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController(NinicoDbContext _context) : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var datas = await _context.Sliders.Where(x => x.isDeleted == false).Select(x => new SliderItemVM
+            {
+                Title = x.Title,
+                SubTitle = x.SubTitle,
+                Link = x.Link,
+                StartPrice  =x.StartPrice,
+                ImageUrl = x.ImageUrl
+            }
+            ).ToListAsync();
+            return View(datas);
         }
 
 
