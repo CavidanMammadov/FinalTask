@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "u/lfQtXgIRHVs5Phl+tINWSDzLsuS7CsYB/VJhMoezA=",
+  "Hash": "emVGacor5B0tth4EufjUXNRViBECJ3YzeeGXBfSlf6w=",
   "Source": "NinicoFinalTask",
   "BasePath": "_content/NinicoFinalTask",
   "Mode": "Default",
@@ -42539,6 +42539,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\scss\\utils\\_typography.scss"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\z4tyfuh5.hiy.png",
+      "SourceId": "NinicoFinalTask",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
+      "BasePath": "_content/NinicoFinalTask",
+      "RelativePath": "imgs/products/z4tyfuh5.hiy.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\products\\z4tyfuh5.hiy.png"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\sliders\\2hxlzr4s.w23.png",
       "SourceId": "NinicoFinalTask",
       "SourceType": "Discovered",
@@ -42575,6 +42594,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\sliders\\2mt10i5k.4ga.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\sliders\\fuoqf4zg.li3.png",
+      "SourceId": "NinicoFinalTask",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
+      "BasePath": "_content/NinicoFinalTask",
+      "RelativePath": "imgs/sliders/fuoqf4zg.li3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\sliders\\fuoqf4zg.li3.png"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\sliders\\gazknbd0.ttd.jpg",
