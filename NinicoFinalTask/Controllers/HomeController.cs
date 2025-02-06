@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NinicoFinalTask.DataAcces;
 using NinicoFinalTask.Models;
+using NinicoFinalTask.ViewModel.Category;
 using NinicoFinalTask.ViewModel.Common;
 using NinicoFinalTask.ViewModel.Product;
 using NinicoFinalTask.ViewModel.Slider;
@@ -31,6 +32,10 @@ namespace NinicoFinalTask.Controllers
                 Name = x.Name,
                 Price = x.SellPrice
 
+            }).ToListAsync();
+            vm.Categories = await _context.Categories.Where(x => x.isDeleted == false).Select(x => new CategoryItemVM
+            {
+                Name = x.Name,
             }).ToListAsync();
             return View(vm);
         }

@@ -1,4 +1,5 @@
-﻿using NinicoFinalTask.ViewModel.Product;
+﻿using NinicoFinalTask.ViewModel.Category;
+using NinicoFinalTask.ViewModel.Product;
 using NinicoFinalTask.ViewModel.Slider;
 
 namespace NinicoFinalTask.ViewModel.Common
@@ -7,5 +8,6 @@ namespace NinicoFinalTask.ViewModel.Common
     {
         public IEnumerable<SliderItemVM> Sliders { get; set; }
         public IEnumerable<ProductItemVM> Products { get; set; }
+        public IEnumerable<CategoryItemVM> Categories { get; set; }
     }
 }
