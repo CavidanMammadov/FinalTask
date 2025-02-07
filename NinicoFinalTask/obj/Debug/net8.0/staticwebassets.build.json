@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PQBRAw0S+50B773+boAnrbeEmWWNyo48pDa6QERM9u4=",
+  "Hash": "3GFvyXgn3Hq08tointnffyGFXYlYHgC2glzUDX1s+fQ=",
   "Source": "NinicoFinalTask",
   "BasePath": "_content/NinicoFinalTask",
   "Mode": "Default",
@@ -42539,12 +42539,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\scss\\utils\\_typography.scss"
     },
     {
-      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\1dphlrna.4np.png",
+      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\13tooydl.mve.jpg",
       "SourceId": "NinicoFinalTask",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
       "BasePath": "_content/NinicoFinalTask",
-      "RelativePath": "imgs/products/1dphlrna.4np.png",
+      "RelativePath": "imgs/products/13tooydl.mve.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -42555,7 +42555,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\products\\1dphlrna.4np.png"
+      "OriginalItemSpec": "wwwroot\\imgs\\products\\13tooydl.mve.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\3f425rdo.5vj.png",
@@ -42575,25 +42575,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\products\\3f425rdo.5vj.png"
-    },
-    {
-      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\gglswey0.pr0.png",
-      "SourceId": "NinicoFinalTask",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
-      "BasePath": "_content/NinicoFinalTask",
-      "RelativePath": "imgs/products/gglswey0.pr0.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\products\\gglswey0.pr0.png"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\raqsnr0y.l2n.jpg",
@@ -42632,25 +42613,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\products\\umkrcybn.ydb.jpeg"
-    },
-    {
-      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\yam2sgs4.2x3.png",
-      "SourceId": "NinicoFinalTask",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
-      "BasePath": "_content/NinicoFinalTask",
-      "RelativePath": "imgs/products/yam2sgs4.2x3.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\products\\yam2sgs4.2x3.png"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\z4tyfuh5.hiy.png",

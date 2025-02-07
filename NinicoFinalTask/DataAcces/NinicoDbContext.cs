@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using NinicoFinalTask.Models;
 
 namespace NinicoFinalTask.DataAcces
 {
-    public class NinicoDbContext : DbContext
+    public class NinicoDbContext : IdentityDbContext<User>
     {
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Category>  Categories { get; set; }

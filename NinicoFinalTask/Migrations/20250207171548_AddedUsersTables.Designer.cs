@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NinicoFinalTask.DataAcces;
 
@@ -11,9 +12,11 @@ using NinicoFinalTask.DataAcces;
 namespace NinicoFinalTask.Migrations
 {
     [DbContext(typeof(NinicoDbContext))]
-    partial class NinicoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250207171548_AddedUsersTables")]
+    partial class AddedUsersTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -21,7 +21,7 @@
                     <th scope="col">Discount</th>
                     <th scope="col">Stock count</th>
                    @*  <th scope="col"> Product Images</th> *@
-                    <th colspan="2" scope="col">Action</th>
+                    <th colspan="3" scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +42,9 @@
                         </td>
                         <td>
                             <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger" asp-action="Hide" asp-route-id="@item.Id">Hide</a>
                         </td>
                     </tr>
                 }
