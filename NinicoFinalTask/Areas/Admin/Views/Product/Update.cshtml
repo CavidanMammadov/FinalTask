@@ -1,8 +1,8 @@
-﻿@model ProductCreateVM
-@{
-    ViewData["Title"] = "Create";
-}
+﻿@model ProductUpdateVM
 
+@{
+    ViewData["Title"] = "Update";
+}
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Create Product</h6>
@@ -20,18 +20,28 @@
                 <textarea asp-for="Description" class="form-control"></textarea>
                 <span asp-validation-for="Description" class="text-small text-danger"></span>
             </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label asp-for="CoverFile"></label>
-                    <input accept="image/*" asp-for="CoverFile" class="form-control">
-                    <span asp-validation-for="CoverFile" class="text-small text-danger"></span>
+
+            <div class="form-group">
+                <div>
+                    <img width="80px" src="~/imgs/products/@Model.CoverFileUrl" alt="CiverFile" />
                 </div>
-                 <div class="form-group">
+                <label asp-for="CoverFile"></label>
+                <input accept="image/*" asp-for="CoverFile" class="form-control">
+                <span asp-validation-for="CoverFile" class="text-small text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="d-flex gap-1">
+                    @foreach (var item in Model.OtherImagesUrl ?? [])
+                    {
+                        <img class="prod-imgs" item-id="@item.Id" width="80px" src="~/imgs/products/@item.Url" alt="CoverFile" />
+
+                    }
+                </div>
                 <label asp-for="OtherImages"></label>
                 <input accept="image/*" asp-for="OtherImages" class="form-control">
                 <span asp-validation-for="OtherImages" class="text-small text-danger"></span>
-                </div>
             </div>
+
             <div class="form-row">
                 <div class="form-group col">
                     <label asp-for="CostPrice"></label>
@@ -71,3 +81,44 @@
         </form>
     </div>
 </div>
+@section script {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+    <script>
+        $(".prod-imgs").click(function () {
+            let img = $(this);
+            let id = $(this).attr("item-id");
+            Swal.fire({
+                title: "Silinsin?",
+                text: "!FILE REMOVE!!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "warning",
+                confirmButtonText: "Remove!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    fetch('/admin/Product/DeleteImage/' + id)
+                        .then(res => {
+                            if (res) {
+                                Swal.fire({
+                                    title: "Deleted!",
+                                    text: "Your file has been deleted.",
+                                    icon: "success"
+                                });
+                                img.remove();
+                            }
+                        });
+
+                }
+            });
+
+
+
+        });
+    </script>
+
+}
+@section style {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+
+}

@@ -11,7 +11,7 @@
         public string CoverImage { get; set; } = null!;
         public int? CategoryId { get; set; }
         public Category? Category { get; set; }
-        public IEnumerable<ProductImage>? Images { get; set; }
+        public List<ProductImage>? Images { get; set; }
 
     }
 }
