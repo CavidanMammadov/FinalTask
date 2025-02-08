@@ -495,7 +495,6 @@
         <section class="track-area pt-80 pb-40">
             <div class="container">
                 <div class="row justify-content-center">
-
                     <div class="col-lg-6 col-sm-12">
                         <div class="tptrack__product mb-40">
                             <form class="user" method="post">
@@ -509,52 +508,48 @@
                                             <p>Your personal data will be used to support your experience throughout this website, to manage access to your account.</p>
                                         </div>
                                     </div>
-                                    <form class="user" method="post">
-                                        <div class="tptrack__id mb-10">
-                                            <form action="#">
-                                                <label asp-for="FullName"></label>
-                                                <input asp-for="FullName" class="form-control form-control-user">
-                                                <span class="text-danger" asp-validation-for="FullName"></span>
-                                            </form>
-                                        </div>
-                                        <div class="tptrack__id mb-10">
-                                            <form action="#">
-                                                <label asp-for="UserName"></label>
-                                                <input asp-for="UserName" class="form-control form-control-user">
-                                                <span class="text-danger" asp-validation-for="UserName"></span>
-                                            </form>
-                                        </div>
-                                        <div class="tptrack__id mb-10">
-                                            <form action="#">
-                                                <label asp-for="Email"></label>
-                                                <input asp-for="Email" class="form-control form-control-user">
-                                                <span class="text-danger" asp-validation-for="Email "></span>
-                                            </form>
-                                        </div>
-                                        <div class="tptrack__email mb-10">
-                                            <form action="#">
-                                                <label asp-for="Password"></label>
-                                                <input asp-for="Password" class="form-control form-control-user">
-                                                <span class="text-danger" asp-validation-for="Password"></span>
-                                            </form>
-                                        </div>
-                                        <div class="tptrack__email mb-10">
-                                            <form action="#">
-                                                <label asp-for="RePassword"></label>
-                                                <input asp-for="RePassword" class="form-control form-control-user">
-                                                <span class="text-danger" asp-validation-for="RePassword"></span>
-                                            </form>
-                                        </div>
 
-                                        <div class="tpsign__account">
-                                            <a href="#">Already Have Account?</a>
-                                        </div>
-                                        <div asp-validation-summary="ModelOnly" class="text-danger">
-                                        </div>
-                                        <div class="tptrack__btn">
-                                            <button class="tptrack__submition tpsign__reg">Register Now<i class="fal fa-long-arrow-right"></i></button>
-                                        </div>
-                                    </form>
+                                    <div class="tptrack__id mb-10">
+                                        <label asp-for="FullName"></label>
+                                        <input asp-for="FullName" class="form-control form-control-user">
+                                        <span class="text-danger" asp-validation-for="FullName"></span>
+                                    </div>
+
+                                    <div class="tptrack__id mb-10">
+                                        <label asp-for="UserName"></label>
+                                        <input asp-for="UserName" class="form-control form-control-user">
+                                        <span class="text-danger" asp-validation-for="UserName"></span>
+                                    </div>
+
+                                    <div class="tptrack__id mb-10">
+                                        <label asp-for="Email"></label>
+                                        <input asp-for="Email" class="form-control form-control-user">
+                                        <span class="text-danger" asp-validation-for="Email"></span>
+                                    </div>
+
+                                    <div class="tptrack__email mb-10">
+                                        <label asp-for="Password"></label>
+                                        <input asp-for="Password" type="password" class="form-control form-control-user">
+                                        <span class="text-danger" asp-validation-for="Password"></span>
+                                    </div>
+
+                                    <div class="tptrack__email mb-10">
+                                        <label asp-for="RePassword"></label>
+                                        <input asp-for="RePassword" type="password" class="form-control form-control-user">
+                                        <span class="text-danger" asp-validation-for="RePassword"></span>
+                                    </div>
+
+                                    <div class="tpsign__account">
+                                        <a href="#">Already Have Account?</a>
+                                    </div>
+
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                    <div class="tptrack__btn">
+                                        <button type="submit" class="tptrack__submition tpsign__reg">
+                                            Register Now<i class="fal fa-long-arrow-right"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -562,7 +557,7 @@
                 </div>
             </div>
         </section>
-        <!-- track-area-end -->
+
 
     </main>
     <!-- main-area-end -->

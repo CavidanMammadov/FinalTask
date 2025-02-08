@@ -21,11 +21,11 @@ namespace NinicoFinalTask
             {
                 opt.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+/ ";
                 opt.Password.RequiredLength = 3;
-                opt.Password.RequireNonAlphanumeric = true;
-                opt.Password.RequireDigit = true;
-                opt.Password.RequireLowercase = true;
-                opt.Password.RequireUppercase = true;
-                opt.Lockout.MaxFailedAccessAttempts = 5;
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequireDigit = false;
+                opt.Password.RequireLowercase = false;
+                opt.Password.RequireUppercase = false;
+                opt.Lockout.MaxFailedAccessAttempts = 100;
                 opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
 
             }).AddDefaultTokenProviders().AddEntityFrameworkStores<NinicoDbContext>();
@@ -45,6 +45,18 @@ namespace NinicoFinalTask
             app.UseRouting();
 
             app.UseAuthorization();
+
+
+
+
+
+            app.MapControllerRoute(name: "login",
+             pattern: "login",
+             defaults: new { controller = "Account", action = "login" }
+               ); 
+            
+            
+            
             app.MapControllerRoute(name: "register",
              pattern: "register",
              defaults: new { controller = "Account", action = "Register" }
