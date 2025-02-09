@@ -30,6 +30,10 @@ namespace NinicoFinalTask
                 opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
 
             }).AddDefaultTokenProviders().AddEntityFrameworkStores<NinicoDbContext>();
+            builder.Services.ConfigureApplicationCookie(x =>
+            {
+                x.AccessDeniedPath = "/Home/AccesDenied";
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -55,10 +59,10 @@ namespace NinicoFinalTask
             app.MapControllerRoute(name: "login",
              pattern: "login",
              defaults: new { controller = "Account", action = "login" }
-               ); 
-            
-            
-            
+               );
+
+
+
             app.MapControllerRoute(name: "register",
              pattern: "register",
              defaults: new { controller = "Account", action = "Register" }

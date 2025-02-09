@@ -1,0 +1,21 @@
+﻿@using NinicoFinalTask.ViewModel.Auths
+@model UserRoleChangeVM
+
+@{
+    ViewData["Title"] = "Change Role";
+}
+
+<h2>İstifadəçi rolunu dəyiş</h2>
+
+<form asp-action="ChangeRole" asp-controller="User" method="post">
+    <input type="hidden" asp-for="UserId" /> @* UserId gizli sahə *@
+    <div class="form-group">
+        <label asp-for="NewRole">Yeni Rol</label>
+        <select asp-for="NewRole" class="form-control" asp-items="new SelectList(ViewBag.Roles)">
+            <option selected disabled>Yeni rolu seçin</option>
+        </select>
+        <span asp-validation-for="NewRole" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Rolu Dəyiş</button>
+</form>

@@ -1,0 +1,39 @@
+﻿@using NinicoFinalTask.ViewModel.Auths
+@model List<UserItemVM>
+
+@{
+    ViewData["Title"] = "İstifadəçilər";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">User List</h6>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.UserName</td>
+                        <td>@item.Email</td>
+                        <td>@string.Join(", ", item.Roles)</td> @* Bir neçə rolu vergüllə ayırır *@
+                        <td>
+                            <a class="btn btn-success" asp-action="ChangeRole" asp-route-id="@item.Id">Change Role</a>
+                            <a class="btn btn-danger" asp-action="DeleteUser" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

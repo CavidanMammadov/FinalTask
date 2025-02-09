@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NinicoFinalTask.DataAcces;
+using NinicoFinalTask.Enums;
 using NinicoFinalTask.Extensions;
+using NinicoFinalTask.Helpers;
 using NinicoFinalTask.Models;
 using NinicoFinalTask.ViewModel.Slider;
 using System.Security.Cryptography;
@@ -10,7 +12,7 @@ using System.Security.Cryptography;
 namespace NinicoFinalTask.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles =RoleConstant.Slider)]
     public class SliderController(NinicoDbContext _context, IWebHostEnvironment _env) : Controller
     {
         public async Task<IActionResult> Index()

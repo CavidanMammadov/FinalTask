@@ -39,7 +39,10 @@ namespace NinicoFinalTask.Controllers
             }).ToListAsync();
             return View(vm);
         }
-
+        public async Task<IActionResult> AccesDenied()
+        {
+            return View();
+        }
 
     }
 }

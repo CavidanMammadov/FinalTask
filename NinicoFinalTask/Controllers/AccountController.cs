@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NinicoFinalTask.Models;
 using NinicoFinalTask.ViewModel.Auths;
@@ -7,6 +8,7 @@ namespace NinicoFinalTask.Controllers
 {
     public class AccountController(UserManager<User> _userManager, SignInManager<User> _signInManager) : Controller
     {
+        bool isAuthendicated => User.Identity?.IsAuthenticated ?? false;
         [HttpGet]
         public IActionResult Register()
         {
@@ -16,6 +18,7 @@ namespace NinicoFinalTask.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(UserCreateVM vm)
         {
+            if(isAuthendicated == true) return RedirectToAction("Index","Home");
             if (!ModelState.IsValid) return View(vm);
 
             if (vm.Password != vm.RePassword)
@@ -95,7 +98,7 @@ namespace NinicoFinalTask.Controllers
 
             return LocalRedirect(ReturnUrl);
         }
-
+        [Authorize]
         public async Task<IActionResult> LogOut()
         {
             await _signInManager.SignOutAsync();

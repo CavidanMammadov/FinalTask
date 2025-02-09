@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NinicoFinalTask.DataAcces;
 using NinicoFinalTask.Extensions;
+using NinicoFinalTask.Helpers;
 using NinicoFinalTask.Models;
 using NinicoFinalTask.ViewModel.Common;
 using NinicoFinalTask.ViewModel.Product;
@@ -10,7 +11,7 @@ using NinicoFinalTask.ViewModel.Product;
 namespace NinicoFinalTask.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles =RoleConstant.Product)]
     public class ProductController(NinicoDbContext _context, IWebHostEnvironment _env) : Controller
     {
 

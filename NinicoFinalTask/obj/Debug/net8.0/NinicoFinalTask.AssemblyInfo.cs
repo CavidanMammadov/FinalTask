@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NinicoFinalTask")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bbc931561b5da63eebbdca395588fc7d203d3a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80e69ca7d88701ca3846f8a2fd78afa49d4dca8b")]
 [assembly: System.Reflection.AssemblyProductAttribute("NinicoFinalTask")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NinicoFinalTask")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
