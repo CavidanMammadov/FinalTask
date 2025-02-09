@@ -17,8 +17,8 @@
 
                             </ul>
                         }
-                        
-                       
+
+
                     </div>
                 </div>
             </div>
@@ -219,8 +219,27 @@
                             <i class="fal fa-shopping-cart"></i>
                             <span class="tp-product-count">2</span>
                         </button>
-                        <a href="sign-in.html"><i class="fal fa-user"></i></a>
-                        <a href="wishlist.html"><i class="fal fa-heart"></i></a>
+                        @if (Context.User.Identity?.IsAuthenticated == true)
+                        {
+
+                            <li>
+
+                                <a asp-action="LogOut" asp-controller="Account">
+                                    <span class="ti-shift-right"></span>
+                                </a>
+                                <a href="wishlist.html"><i class="fal fa-heart"></i></a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <a asp-action="Login" asp-controller="account">
+                                    <span class="fal fa-user"></span>
+                                </a>
+                            </li>
+
+                        }
+
                     </div>
                     <div class="header-meta__search-5 ml-25">
                         <div class="header-search-bar-5">
@@ -335,7 +354,7 @@
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
                  tabindex="0">
-                
+
                 <div class="tpsidebar-categories">
                     @foreach (var item in Model.Categories)
                     {
@@ -345,7 +364,7 @@
                         </ul>
 
                     }
-                   
+
                 </div>
             </div>
         </div>
@@ -590,10 +609,10 @@
                                             <div class="tpproduct__priceinfo-list">
                                                 @if (item.IsInStock)
                                                 {
-                                                    if(item.Discount > 0)
+                                                    if (item.Discount > 0)
                                                     {
                                                         <del>$@item.Price</del>
-                                                        <span class="text-danger">$@(item.Price - item.Price * item.Discount /100)</span>
+                                                        <span class="text-danger">$@(item.Price - item.Price * item.Discount / 100)</span>
                                                     }
                                                     else
                                                     {

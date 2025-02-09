@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NinicoFinalTask.DataAcces;
 using NinicoFinalTask.Models;
@@ -7,6 +8,7 @@ using NinicoFinalTask.ViewModel.Category;
 namespace NinicoFinalTask.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class CategoryController(NinicoDbContext _context) : Controller
     {
         public async Task<IActionResult> Index()

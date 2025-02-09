@@ -7,6 +7,34 @@
       "RelativeMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|solutionrelative:ninicofinaltask\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|c:\\users\\user\\source\\repos\\ninicofinaltask\\ninicofinaltask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|solutionrelative:ninicofinaltask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|c:\\users\\user\\source\\repos\\ninicofinaltask\\ninicofinaltask\\extensions\\seedextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|solutionrelative:ninicofinaltask\\extensions\\seedextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|c:\\users\\user\\source\\repos\\ninicofinaltask\\ninicofinaltask\\enums\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|solutionrelative:ninicofinaltask\\enums\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|c:\\users\\user\\source\\repos\\ninicofinaltask\\ninicofinaltask\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|solutionrelative:ninicofinaltask\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|c:\\users\\user\\source\\repos\\ninicofinaltask\\ninicofinaltask\\areas\\admin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|solutionrelative:ninicofinaltask\\areas\\admin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|c:\\users\\user\\source\\repos\\ninicofinaltask\\ninicofinaltask\\areas\\admin\\controllers\\slidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|solutionrelative:ninicofinaltask\\areas\\admin\\controllers\\slidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|c:\\users\\user\\source\\repos\\ninicofinaltask\\ninicofinaltask\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|solutionrelative:ninicofinaltask\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|c:\\users\\user\\source\\repos\\ninicofinaltask\\ninicofinaltask\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|solutionrelative:ninicofinaltask\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -15,8 +43,12 @@
       "RelativeMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|solutionrelative:ninicofinaltask\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|c:\\users\\user\\source\\repos\\ninicofinaltask\\ninicofinaltask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|solutionrelative:ninicofinaltask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|c:\\users\\user\\source\\repos\\ninicofinaltask\\ninicofinaltask\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|solutionrelative:ninicofinaltask\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|c:\\users\\user\\source\\repos\\ninicofinaltask\\ninicofinaltask\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D9B90BEC-A11A-4CD2-8B0D-4EC19D8C4AFF}|NinicoFinalTask\\NinicoFinalTask.csproj|solutionrelative:ninicofinaltask\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,42 +66,135 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SeedExtension.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Extensions\\SeedExtension.cs",
+              "RelativeDocumentMoniker": "NinicoFinalTask\\Extensions\\SeedExtension.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Extensions\\SeedExtension.cs",
+              "RelativeToolTip": "NinicoFinalTask\\Extensions\\SeedExtension.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T10:46:16.627Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Roles.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Enums\\Roles.cs",
+              "RelativeDocumentMoniker": "NinicoFinalTask\\Enums\\Roles.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Enums\\Roles.cs",
+              "RelativeToolTip": "NinicoFinalTask\\Enums\\Roles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T10:44:33.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DashBoardController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Areas\\Admin\\Controllers\\DashBoardController.cs",
+              "RelativeDocumentMoniker": "NinicoFinalTask\\Areas\\Admin\\Controllers\\DashBoardController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Areas\\Admin\\Controllers\\DashBoardController.cs",
+              "RelativeToolTip": "NinicoFinalTask\\Areas\\Admin\\Controllers\\DashBoardController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T10:40:53.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "NinicoFinalTask\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "NinicoFinalTask\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T10:40:47.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SliderController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Areas\\Admin\\Controllers\\SliderController.cs",
+              "RelativeDocumentMoniker": "NinicoFinalTask\\Areas\\Admin\\Controllers\\SliderController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Areas\\Admin\\Controllers\\SliderController.cs",
+              "RelativeToolTip": "NinicoFinalTask\\Areas\\Admin\\Controllers\\SliderController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T10:40:39.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "NinicoFinalTask\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "NinicoFinalTask\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T10:40:27.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "NinicoFinalTask\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "NinicoFinalTask\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAHMAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-09T09:33:06.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "NinicoFinalTask\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "NinicoFinalTask\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAANUAAAAAAAAAAAAuwOYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-09T09:03:00.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Program.cs",
               "RelativeDocumentMoniker": "NinicoFinalTask\\Program.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Program.cs",
               "RelativeToolTip": "NinicoFinalTask\\Program.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAAADUAAAAcAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACwAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T11:16:56.379Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-08T11:16:56.379Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "NinicoFinalTask\\Views\\Account\\Register.cshtml",
               "ToolTip": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Views\\Account\\Register.cshtml",
               "RelativeToolTip": "NinicoFinalTask\\Views\\Account\\Register.cshtml",
-              "ViewState": "AQIAABACAAAAAAAAAAAAABUCAAAqAAAA",
+              "ViewState": "AQIAAPgBAAAAAAAAAAAAAB4CAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-08T11:11:34.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-08T11:11:34.905Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "NinicoFinalTask\\Views\\Account\\Login.cshtml",
               "ToolTip": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Views\\Account\\Login.cshtml",
               "RelativeToolTip": "NinicoFinalTask\\Views\\Account\\Login.cshtml",
-              "ViewState": "AQIAAAECAAAAAAAAAAAAAAoCAAAqAAAA",
+              "ViewState": "AQIAAOYBAAAAAAAAAAAwwPsBAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-08T11:07:24.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-08T11:07:24.391Z"
             },
             {
               "$type": "Document",
@@ -79,7 +204,7 @@
               "RelativeDocumentMoniker": "NinicoFinalTask\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\Controllers\\AccountController.cs",
               "RelativeToolTip": "NinicoFinalTask\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAAAC0AAAA1AAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAAwGEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-08T10:58:35.022Z",
               "EditorCaption": ""

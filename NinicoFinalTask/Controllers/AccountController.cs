@@ -5,7 +5,7 @@ using NinicoFinalTask.ViewModel.Auths;
 
 namespace NinicoFinalTask.Controllers
 {
-    public class AccountController(UserManager<User> _userManager,SignInManager<User> _signInManager) : Controller
+    public class AccountController(UserManager<User> _userManager, SignInManager<User> _signInManager) : Controller
     {
         [HttpGet]
         public IActionResult Register()
@@ -45,19 +45,62 @@ namespace NinicoFinalTask.Controllers
 
             return RedirectToAction("Login", "Account");
         }
-
-
-
-        public async Task<IActionResult> Login(LoginVM vm)
+        public async Task<IActionResult> Login()
         {
-            if (!ModelState.IsValid) return View(vm);
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginVM vm, string? ReturnUrl)
+        {
+            if (!ModelState.IsValid) return View();
+
             User? user = null;
             if (vm.UsernameOrEmail.Contains('@'))
                 user = await _userManager.FindByEmailAsync(vm.UsernameOrEmail);
             else
                 user = await _userManager.FindByNameAsync(vm.UsernameOrEmail);
-            await _signInManager.PasswordSignInAsync(user, vm.Password,vm.RememberMe,true);
-            return RedirectToAction("Index", "Home");
+
+            if (user == null)
+            {
+                ModelState.AddModelError("", "USERNAME OR PASSWORD IS INCORRECT");
+                return View();
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(user, vm.Password, vm.RememberMe, true);
+
+            if (!result.Succeeded)
+            {
+                if (result.IsNotAllowed)
+                    ModelState.AddModelError("", "Your account is not allowed to sign in.");
+
+                if (result.IsLockedOut && user.LockoutEnd.HasValue)
+                    ModelState.AddModelError("", "Wait until " + user.LockoutEnd.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+
+                ModelState.AddModelError("", "USERNAME OR PASSWORD IS INCORRECT");
+                return View();
+            }
+
+            if (string.IsNullOrWhiteSpace(ReturnUrl))
+            {
+                if (await _userManager.IsInRoleAsync(user, "Admin"))
+                {
+                    return RedirectToAction("Index", "DashBoard", new { Area = "Admin" });
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+
+            return LocalRedirect(ReturnUrl);
         }
+
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction(nameof(Login));
+        }
+
     }
 }

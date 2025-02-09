@@ -505,7 +505,7 @@
                                             <img src="assets/img/icon/sign-up.png" alt="">
                                         </div>
                                         <div class="tptrack__item-content">
-                                            <h4 class="tptrack__item-title">Sign Up</h4>
+                                            <h4 class="tptrack__item-title">Sign In</h4>
                                             <p>Your personal data will be used to support your experience throughout this website, to manage access to your account.</p>
                                         </div>
                                     </div>
@@ -521,12 +521,11 @@
                                         <input asp-for="Password" type="password" class="form-control form-control-user">
                                         <span class="text-danger" asp-validation-for="Password"></span>
                                     </div>
+
                                     <div class="tpsign__account">
-                                        <a asp-for="Register">Create account</a>
-                                    </div>
 
-                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
+                                        <a asp-action="Register" asp-controller="Account">Create account</a>
+                                    </div>                                   
                                     <div class="tptrack__btn">
                                         <button type="submit" class="tptrack__submition tpsign__reg">
                                             Login<i class="fal fa-long-arrow-right"></i>

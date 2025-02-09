@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NinicoFinalTask.DataAcces;
 using NinicoFinalTask.Extensions;
@@ -9,6 +10,7 @@ using System.Security.Cryptography;
 namespace NinicoFinalTask.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class SliderController(NinicoDbContext _context, IWebHostEnvironment _env) : Controller
     {
         public async Task<IActionResult> Index()

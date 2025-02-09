@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NinicoFinalTask.DataAcces;
+using NinicoFinalTask.Extensions;
 using NinicoFinalTask.Models;
 
 namespace NinicoFinalTask
@@ -41,6 +42,7 @@ namespace NinicoFinalTask
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseUserSeed();
 
             app.UseRouting();
 
