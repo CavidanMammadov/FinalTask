@@ -2,7 +2,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NinicoFinalTask.DataAcces;
 using NinicoFinalTask.Extensions;
+using NinicoFinalTask.Helpers;
 using NinicoFinalTask.Models;
+using NinicoFinalTask.Services.Abstracts;
+using NinicoFinalTask.Services.Implements;
 
 namespace NinicoFinalTask
 {
@@ -30,6 +33,9 @@ namespace NinicoFinalTask
                 opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
 
             }).AddDefaultTokenProviders().AddEntityFrameworkStores<NinicoDbContext>();
+            builder.Services.AddScoped<IEmailService , EmailService>();
+            builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection(SmtpOptions.Name));
+         
             builder.Services.ConfigureApplicationCookie(x =>
             {
                 x.AccessDeniedPath = "/Home/AccesDenied";

@@ -2,11 +2,13 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NinicoFinalTask.Models;
+using NinicoFinalTask.Services.Abstracts;
 using NinicoFinalTask.ViewModel.Auths;
 
 namespace NinicoFinalTask.Controllers
 {
-    public class AccountController(UserManager<User> _userManager, SignInManager<User> _signInManager) : Controller
+    public class AccountController(UserManager<User> _userManager, SignInManager<User> _signInManager
+        ,IEmailService _service) : Controller
     {
         bool isAuthendicated => User.Identity?.IsAuthenticated ?? false;
         [HttpGet]
@@ -103,6 +105,11 @@ namespace NinicoFinalTask.Controllers
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction(nameof(Login));
+        }
+        public IActionResult Send()
+        {
+            _service.SendAsync().Wait();
+            return Ok();
         }
 
     }
