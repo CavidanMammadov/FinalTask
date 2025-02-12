@@ -6,6 +6,7 @@ using NinicoFinalTask.Helpers;
 using NinicoFinalTask.Models;
 using NinicoFinalTask.Services.Abstracts;
 using NinicoFinalTask.Services.Implements;
+using System.Configuration;
 
 namespace NinicoFinalTask
 {
@@ -21,10 +22,13 @@ namespace NinicoFinalTask
             {
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("MsSql"));
             });
+
+
             builder.Services.AddIdentity<User, IdentityRole>(opt =>
             {
                 opt.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+/ ";
                 opt.Password.RequiredLength = 3;
+                opt.SignIn.RequireConfirmedEmail = true;
                 opt.Password.RequireNonAlphanumeric = false;
                 opt.Password.RequireDigit = false;
                 opt.Password.RequireLowercase = false;
@@ -33,13 +37,21 @@ namespace NinicoFinalTask
                 opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
 
             }).AddDefaultTokenProviders().AddEntityFrameworkStores<NinicoDbContext>();
+
             builder.Services.AddScoped<IEmailService , EmailService>();
+
+
+
             builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection(SmtpOptions.Name));
-         
+           
+
+
             builder.Services.ConfigureApplicationCookie(x =>
             {
                 x.AccessDeniedPath = "/Home/AccesDenied";
             });
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using NinicoFinalTask.Models;
 using NinicoFinalTask.Services.Abstracts;
 using NinicoFinalTask.ViewModel.Auths;
+using System.Text;
 
 namespace NinicoFinalTask.Controllers
 {
@@ -47,8 +48,9 @@ namespace NinicoFinalTask.Controllers
                 }
                 return View(vm);
             }
-
-            return RedirectToAction("Login", "Account");
+            string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            _service.SendEmailConfirmationAsync(user.Email ,user.UserName ,token);
+            return Content("Email sent");
         }
         public async Task<IActionResult> Login()
         {
@@ -82,7 +84,7 @@ namespace NinicoFinalTask.Controllers
                 if (result.IsLockedOut && user.LockoutEnd.HasValue)
                     ModelState.AddModelError("", "Wait until " + user.LockoutEnd.Value.ToString("yyyy-MM-dd HH:mm:ss"));
 
-                ModelState.AddModelError("", "USERNAME OR PASSWORD IS INCORRECT");
+                ModelState.AddModelError("", "You must enter your email");
                 return View();
             }
 
@@ -106,10 +108,23 @@ namespace NinicoFinalTask.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction(nameof(Login));
         }
-        public IActionResult Send()
+        public async Task<IActionResult> VerifyEmail(string token , string user)
         {
-            _service.SendAsync().Wait();
-            return Ok();
+          var entity =   await _userManager.FindByNameAsync(user);
+            if (entity is null) return BadRequest();
+            var result = await _userManager.ConfirmEmailAsync(entity, token.Replace(' ','+'));
+           if(! result.Succeeded)
+            {
+                StringBuilder sb = new StringBuilder();
+                foreach (var item in result.Errors)
+                {
+                    sb.AppendLine(item.Description);
+                }
+                return Content(sb.ToString());
+            }
+            await _signInManager.SignInAsync(entity, true);
+            return RedirectToAction("Index","Home");
+
         }
 
     }
