@@ -47,7 +47,10 @@ namespace NinicoFinalTask.Controllers
                 Price = data.SellPrice,
                 ImageUrl = data.CoverImage,
                 CategoryId = data.CategoryId,
-                RelatedProducts = relatedProducts
+                RelatedProducts = relatedProducts,
+                IsInStock = data.Quantity>0,
+                Discount =data.Discount,
+                CategoryName = data.Category!.Name
             };
 
             return View(model);

@@ -14,6 +14,7 @@ namespace NinicoFinalTask.ViewModel.Product
         public bool IsInStock { get; set; }
         public List<string> OtherImagesUrl { get; set; }
         public int? CategoryId { get; set; }
+        public string CategoryName { get; set; }
         public List<ProductItemVM> RelatedProducts { get; set; }
         public ProductDetailVM()
         {
