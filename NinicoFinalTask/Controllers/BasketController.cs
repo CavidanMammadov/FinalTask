@@ -11,8 +11,23 @@ namespace NinicoFinalTask.Controllers
     {
         public async Task<IActionResult> Card()
         {
-            return View();
+            var BasketIds = JsonSerializer.Deserialize<List<BasketProductItemVM>>(Request.Cookies["basket"] ?? "[]");
+            var prods = await _context.Products.Where(x => BasketIds.Select(y => y.Id).Any(y => y == x.Id)).Select(x => new GetBasketItemVM
+            {
+                Id = x.Id,
+                Discount = x.Discount,
+                ImageUrl = x.CoverImage,
+                Name = x.Name,
+                SellPrice = x.SellPrice
+            }).ToListAsync();
+            foreach (var item in prods)
+            {
+                item.Count = BasketIds!.FirstOrDefault(x => x.Id == item.Id)!.Count;
+            }
+            return View(prods);
         }
+
+
         public async Task<IActionResult> AddBasket(int id)
         {
             var BasketItems = JsonSerializer.Deserialize<List<BasketProductItemVM>>(Request.Cookies["basket"] ?? "[]");
@@ -30,7 +45,7 @@ namespace NinicoFinalTask.Controllers
             Response.Cookies.Append("basket", JsonSerializer.Serialize(BasketItems));
             return Ok();
         }
-       
+
         public async Task<IActionResult> Delete(int id)
         {
             var basketJson = Request.Cookies["basket"];
@@ -51,7 +66,7 @@ namespace NinicoFinalTask.Controllers
             // Yenilənmiş səbəti cookie-yə yaz
             Response.Cookies.Append("basket", JsonSerializer.Serialize(basketItems), new CookieOptions { Expires = DateTime.Now.AddDays(7) });
 
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
 
 

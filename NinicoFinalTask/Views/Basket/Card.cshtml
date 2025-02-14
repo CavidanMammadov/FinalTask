@@ -2,121 +2,86 @@
 @model List<GetBasketItemVM>
 
 @{
-    ViewData["Title"] = "Card";
+    ViewData["Title"] = "Cart";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!-- main-area-start -->
 <main>
-
-    <!-- breadcrumb-area -->
-    <section class="breadcrumb__area pt-60 pb-60 tp-breadcrumb__bg" data-background="assets/img/banner/breadcrumb-01.jpg">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-7 col-lg-12 col-md-12 col-12">
-                    <div class="tp-breadcrumb">
-                        <div class="tp-breadcrumb__link mb-10">
-                            <span class="breadcrumb-item-active"><a href="index.html">Home</a></span>
-                            <span>Cart</span>
-                        </div>
-                        <h2 class="tp-breadcrumb__title">Product Cart</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- breadcrumb-area-end -->
-    <!-- cart area -->
-    <section class="cart-area pt-80 pb-80 wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
+    <section class="cart-area pt-80 pb-80">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <form action="#">
+                    @if (Model != null && Model.Any())
+                    {
                         <div class="table-content table-responsive">
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th class="product-thumbnail">Images</th>
-                                        <th class="cart-product-name">Product</th>
-                                        <th class="product-price">Unit Price</th>
-                                        <th class="product-quantity">Quantity</th>
-                                        <th class="product-subtotal">Total</th>
-                                        <th class="product-remove">Remove</th>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Unit Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                        <th>Remove</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
                                         <tr>
-                                            <td class="product-thumbnail">
-                                                <a href="shop-details.html">
-                                                    <img src="~/imgs/products/@item.ImageUrl" alt="@item.Name">
+                                            <td>
+                                                <img src="~/imgs/products/@item.ImageUrl" alt="@item.Name" width="50">
+                                            </td>
+                                            <td>@item.Name</td>
+                                            <td>$@item.SellPrice</td>
+                                            <td>@item.Count</td>
+                                            <td>
+                                                $@((item.SellPrice * item.Count) * (1 - (item.Discount / 100.0M)))
+                                            </td>
+                                            <td>
+                                                <a asp-action="Delete" asp-controller="Basket" asp-route-id="@item.Id" class="text-danger">
+                                                    <i class="fa fa-times"></i>
                                                 </a>
-                                            </td>
-                                            <td class="product-name">
-                                                <a href="shop-details.html">@item.Name</a>
-                                            </td>
-                                            <td class="product-price">
-                                                @if (item.Discount > 0)
-                                                {
-                                                    <span class="new-price">$@((100 - item.Discount) * item.SellPrice / 100)</span>
-                                                    <del class="old-price">$@item.SellPrice</del>
-                                                }
-                                                else
-                                                {
-                                                    <span class="new-price">$@item.SellPrice</span>
-                                                }
-                                            </td>
-                                            <td class="product-quantity">
-                                                <span class="cart-minus">-</span>
-                                                <input class="cart-input" type="text" value="@item.Count" />
-                                                <span class="cart-plus">+</span>
-                                            </td>
-                                            <td class="product-subtotal">
-                                                <span class="amount">$@((100 - item.Discount) * item.SellPrice / 100 * item.Count)</span>
-                                            </td>
-                                            <td class="product-remove">
-                                                <a asp-controller="Basket" asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-times"></i></a>
                                             </td>
                                         </tr>
                                     }
                                 </tbody>
                             </table>
                         </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="coupon-all">
-                                    <div class="coupon">
-                                        <input id="coupon_code" class="input-text" name="coupon_code" value=""
-                                               placeholder="Coupon code" type="text">
-                                        <button class="tp-btn tp-color-btn banner-animation" name="apply_coupon" type="submit">
-                                            Apply Coupon
-                                        </button>
-                                    </div>
-                                    <div class="coupon2">
-                                        <button class="tp-btn tp-color-btn banner-animation" name="update_cart" type="submit">Update cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="row justify-content-end">
-                            <div class="col-md-5 ">
+                            <div class="col-md-5">
                                 <div class="cart-page-total">
-                                    <h2>Cart totals</h2>
-                                    <ul class="mb-20">
-                                        <li>Subtotal <span>$@(Model.Sum(x => (100 - x.Discount) * x.SellPrice / 100 * x.Count))</span></li>
-                                        <li>Total <span>$@(Model.Sum(x => (100 - x.Discount) * x.SellPrice / 100 * x.Count))</span></li>
+                                    <h2>Cart Totals</h2>
+                                    <ul>
+                                        <li>
+                                            Subtotal
+                                            <span>
+                                                $@(Model.Sum(x => (x.SellPrice * x.Count) * (1 - (x.Discount / 100.0M))))
+                                            </span>
+                                        </li>
+                                        <li>
+                                            Total
+                                            <span>
+                                                $@(Model.Sum(x => (x.SellPrice * x.Count) * (1 - (x.Discount / 100.0M))))
+                                            </span>
+                                        </li>
                                     </ul>
-                                    <a href="checkout.html" class="tp-btn tp-color-btn banner-animation">Proceed to Checkout</a>
+                                    <a href="checkout.html" class="tp-btn tp-color-btn banner-animation">
+                                        Proceed to Checkout
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    }
+                    else
+                    {
+                        <div class="text-center">
+                            <h2>Your cart is empty</h2>
+                            <a href="/" class="tp-btn tp-color-btn banner-animation">Return to Shop</a>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
     </section>
-    <!-- cart area end-->
-
 </main>
-<!-- main-area-end -->
