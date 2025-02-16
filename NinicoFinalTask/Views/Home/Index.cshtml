@@ -50,10 +50,10 @@
                                     <li><a href="shop-details.html">Shop Details </a></li>
                                     <li><a href="shop-details-2.html">Shop Details 2</a></li>
                                     <li><a href="shop-location.html">Shop Location</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
+                                    <li><a asp-action="card" asp-controller="Basket">Cart</a></li>
                                     <li><a href="sign-in.html">Sign In</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                    <li><a asp-action="wishlist" asp-controller ="Wishlist">Wishlist</a></li>
                                     <li><a href="track.html">Product Track</a></li>
                                 </ul>
                             </li>
@@ -74,7 +74,7 @@
                                         <a class="mega-menu-title">Page layout</a>
                                         <ul>
                                             <li><a href="about.html">About</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
+                                            <li><a asp-action="card" asp-controller="Basket">Cart</a></li>
                                             <li><a href="checkout.html">Checkout</a></li>
                                             <li><a href="sign-in.html">Sign In</a></li>
                                             <li><a href="sign-in.html">Log In</a></li>
@@ -84,7 +84,7 @@
                                         <a class="mega-menu-title">Page type</a>
                                         <ul>
                                             <li><a href="track.html">Product Track</a></li>
-                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                            <li><a asp-action="wishlist" asp-controller ="Wishlist">Wishlist</a></li>
                                             <li><a href="error.html">404 / Error</a></li>
                                             <li><a href="coming-soon.html">Coming Soon</a></li>
                                         </ul>
@@ -156,10 +156,10 @@
                                     <li><a href="shop-details.html">Shop Details </a></li>
                                     <li><a href="shop-details-2.html">Shop Details 2</a></li>
                                     <li><a href="shop-location.html">Shop Location</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
+                                    <li><a asp-action="card" asp-controller="Basket">Cart</a></li>
                                     <li><a href="sign-in.html">Sign In</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                    <li><a asp-action="wishlist" asp-controller ="Wishlist">Wishlist</a></li>
                                     <li><a href="track.html">Product Track</a></li>
                                 </ul>
                             </li>
@@ -180,7 +180,7 @@
                                         <a class="mega-menu-title">Page layout</a>
                                         <ul>
                                             <li><a href="about.html">About</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
+                                            <li><a asp-action="card" asp-controller="Basket">Cart</a></li>
                                             <li><a href="checkout.html">Checkout</a></li>
                                             <li><a href="sign-in.html">Sign In</a></li>
                                             <li><a href="sign-in.html">Log In</a></li>
@@ -190,7 +190,7 @@
                                         <a class="mega-menu-title">Page type</a>
                                         <ul>
                                             <li><a href="track.html">Product Track</a></li>
-                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                            <li><a asp-action="wishlist" asp-controller ="Wishlist">Wishlist</a></li>
                                             <li><a href="error.html">404 / Error</a></li>
                                             <li><a href="coming-soon.html">Coming Soon</a></li>
                                         </ul>
@@ -224,7 +224,7 @@
                                 <a asp-action="LogOut" asp-controller="Account">
                                     <span class="ti-shift-right"></span>
                                 </a>
-                                <a href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                <a asp-action="Wishlist", asp-controller="Wishlist"><i class="fal fa-heart"></i></a>
                             </li>
                         }
                         else
@@ -282,7 +282,7 @@
                             <span>2</span>
                         </button>
                         <a href="sign-in.html"><i class="fal fa-user"></i></a>
-                        <a href="wishlist.html"><i class="fal fa-heart"></i></a>
+                        <a asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                     </div>
                 </div>
             </div>
@@ -370,7 +370,7 @@
         <a href="sign-in.html"><i class="fal fa-user"></i> Login / Register</a>
     </div>
     <div class="tpsideinfo__wishlist-link">
-        <a href="wishlist.html" target="_parent"><i class="fal fa-heart"></i> Wishlist</a>
+        <a asp-action="wishlist" asp-controller ="Wishlist" target="_parent"><i class="fal fa-heart"></i> Wishlist</a>
     </div>
 </div>
 <div class="body-overlay"></div>
@@ -533,7 +533,10 @@
                                         <div class="tpproduct__thumb-action">
                                             <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                             <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                            <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                            <a class="wishlist" asp-action="AddProduct" asp-controller="Wishlist" asp-route-Id="@item.Id">
+                                                <i class="fal fa-heart"></i>
+                                            </a>
+
                                         </div>
                                     </div>
                                     <div class="tpproduct__content">
@@ -585,7 +588,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -595,7 +598,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -611,7 +614,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -621,7 +624,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -637,7 +640,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                     <div class="tpproduct__variation">
                                         <a class="tpproduct__variationitem" href="#">
@@ -673,7 +676,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -689,7 +692,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -700,7 +703,7 @@
                                             <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -716,7 +719,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -727,7 +730,7 @@
                                             <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -746,7 +749,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -756,7 +759,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -776,7 +779,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -786,7 +789,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -805,7 +808,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -815,7 +818,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -835,7 +838,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -845,7 +848,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -864,7 +867,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -875,7 +878,7 @@
                                             <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -895,7 +898,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -906,7 +909,7 @@
                                             <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -922,7 +925,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -933,7 +936,7 @@
                                             <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -952,7 +955,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -962,7 +965,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -982,7 +985,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -992,7 +995,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1011,7 +1014,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1021,7 +1024,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1038,7 +1041,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1048,7 +1051,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1064,7 +1067,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1074,7 +1077,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1090,7 +1093,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                     <div class="tpproduct__variation">
                                         <a class="tpproduct__variationitem" href="#">
@@ -1126,7 +1129,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1146,7 +1149,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1156,7 +1159,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1175,7 +1178,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1186,7 +1189,7 @@
                                             <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1206,7 +1209,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                     <div class="tpproduct__variation">
                                         <a class="tpproduct__variationitem" href="#">
@@ -1242,7 +1245,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1262,7 +1265,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1272,7 +1275,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1291,7 +1294,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1302,7 +1305,7 @@
                                             <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1318,7 +1321,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1329,7 +1332,7 @@
                                             <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1345,7 +1348,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1356,7 +1359,7 @@
                                             <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1375,7 +1378,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1385,7 +1388,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1405,7 +1408,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1415,7 +1418,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1434,7 +1437,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1444,7 +1447,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1461,7 +1464,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1471,7 +1474,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1487,7 +1490,7 @@
                                     <div class="tpproduct__thumb-action">
                                         <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
                                         <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
-                                        <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                        <a class="wishlist" asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
                                     </div>
                                 </div>
                                 <div class="tpproduct__content">
@@ -1497,7 +1500,7 @@
                                             <span>$31.00</span>
                                         </div>
                                         <div class="tpproduct__cart">
-                                            <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                            <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                         </div>
                                     </div>
                                 </div>

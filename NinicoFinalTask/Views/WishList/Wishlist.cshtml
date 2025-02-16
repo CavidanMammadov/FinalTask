@@ -1,0 +1,39 @@
+﻿@model List<WishList>
+
+<div class="container mt-5">
+    <h2 class="mb-4">❤️ Mənim Wishlist-im</h2>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning">Wishlist boşdur.</div>
+    }
+    else
+    {
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Şəkil</th>
+                    <th>Məhsul</th>
+                    <th>Qiymət</th>
+                    <th>Əməliyyatlar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <img src="@item.Product.CoverImage" alt="@item.Product.Name" style="width: 80px; height: auto;">
+                        </td>
+                        <td>@item.Product.Name</td>
+                        <td>@item.Product.SellPrice.ToString("0.00") AZN</td>
+                        <td>
+                            <a href="/Cart/Add?productId=@item.ProductId" class="btn btn-success">➕ Səbətə əlavə et</a>
+                            <a href="/Wishlist/Remove?productId=@item.ProductId" class="btn btn-danger">❌ Sil</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
