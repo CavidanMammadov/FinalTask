@@ -66,7 +66,7 @@ namespace NinicoFinalTask.Areas.Admin.Controllers
                 Quantity = vm.Quantity,
                 Description = vm.Description,
                 CoverImage = await vm.CoverFile!.UploadAsync(_env.WebRootPath, "imgs", "products"),
-                Images = vm.OtherImages.Select(x => new ProductImage
+                Images = vm.OtherImages!.Select(x => new ProductImage
                 {
                     ImageUrl = x.UploadAsync(_env.WebRootPath, "imgs", "products").Result
                 }).ToList()
@@ -90,7 +90,7 @@ namespace NinicoFinalTask.Areas.Admin.Controllers
                 Name = x.Name,
                 Description = x.Description,
                 CoverFileUrl = x.CoverImage,
-                OtherImagesUrl = x.Images.Select(z => new ImageUrlAndId
+                OtherImagesUrl = x.Images!.Select(z => new ImageUrlAndId
                 {
                     Url = z.ImageUrl,
                     Id = z.Id
@@ -149,12 +149,12 @@ namespace NinicoFinalTask.Areas.Admin.Controllers
 
             if (vm.OtherImagesUrl != null)
             {
-                var deletedImageIds = product.Images
+                var deletedImageIds = product.Images!
                     .Where(img => !vm.OtherImagesUrl.Any(x => x.Id == img.Id))
                     .Select(img => img.Id)
                     .ToList();
 
-                foreach (var img in product.Images.Where(x => deletedImageIds.Contains(x.Id)).ToList())
+                foreach (var img in product.Images!.Where(x => deletedImageIds.Contains(x.Id)).ToList())
                 {
                     var imgPath = Path.Combine(_env.WebRootPath, "imgs", "products", img.ImageUrl);
                     if (System.IO.File.Exists(imgPath))
@@ -171,7 +171,7 @@ namespace NinicoFinalTask.Areas.Admin.Controllers
                     ImageUrl = await x.UploadAsync(_env.WebRootPath, "imgs", "products")
                 }));
 
-                product.Images = product.Images.ToList();
+                product.Images = product.Images!.ToList();
                 product.Images.AddRange(newImages);
             }
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3GFvyXgn3Hq08tointnffyGFXYlYHgC2glzUDX1s+fQ=",
+  "Hash": "9NwHg5TAOo2w+YJt/A7HApYQbkB7nv/t432/R9Rxf0M=",
   "Source": "NinicoFinalTask",
   "BasePath": "_content/NinicoFinalTask",
   "Mode": "Default",
@@ -42539,12 +42539,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\scss\\utils\\_typography.scss"
     },
     {
-      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\13tooydl.mve.jpg",
+      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\0izr1ker.omg.webp",
       "SourceId": "NinicoFinalTask",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
       "BasePath": "_content/NinicoFinalTask",
-      "RelativePath": "imgs/products/13tooydl.mve.jpg",
+      "RelativePath": "imgs/products/0izr1ker.omg.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -42555,15 +42555,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\products\\13tooydl.mve.jpg"
+      "OriginalItemSpec": "wwwroot\\imgs\\products\\0izr1ker.omg.webp"
     },
     {
-      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\3f425rdo.5vj.png",
+      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\14sanbqk.u4a.jpeg",
       "SourceId": "NinicoFinalTask",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
       "BasePath": "_content/NinicoFinalTask",
-      "RelativePath": "imgs/products/3f425rdo.5vj.png",
+      "RelativePath": "imgs/products/14sanbqk.u4a.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -42574,15 +42574,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\products\\3f425rdo.5vj.png"
+      "OriginalItemSpec": "wwwroot\\imgs\\products\\14sanbqk.u4a.jpeg"
     },
     {
-      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\raqsnr0y.l2n.jpg",
+      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\1uob3mvr.1ci.jpg",
       "SourceId": "NinicoFinalTask",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
       "BasePath": "_content/NinicoFinalTask",
-      "RelativePath": "imgs/products/raqsnr0y.l2n.jpg",
+      "RelativePath": "imgs/products/1uob3mvr.1ci.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -42593,15 +42593,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\products\\raqsnr0y.l2n.jpg"
+      "OriginalItemSpec": "wwwroot\\imgs\\products\\1uob3mvr.1ci.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\umkrcybn.ydb.jpeg",
+      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\3fqi1bur.usm.jpg",
       "SourceId": "NinicoFinalTask",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
       "BasePath": "_content/NinicoFinalTask",
-      "RelativePath": "imgs/products/umkrcybn.ydb.jpeg",
+      "RelativePath": "imgs/products/3fqi1bur.usm.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -42612,15 +42612,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\products\\umkrcybn.ydb.jpeg"
+      "OriginalItemSpec": "wwwroot\\imgs\\products\\3fqi1bur.usm.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\z4tyfuh5.hiy.png",
+      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\40lrldmw.tbe.jpeg",
       "SourceId": "NinicoFinalTask",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
       "BasePath": "_content/NinicoFinalTask",
-      "RelativePath": "imgs/products/z4tyfuh5.hiy.png",
+      "RelativePath": "imgs/products/40lrldmw.tbe.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -42631,15 +42631,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\products\\z4tyfuh5.hiy.png"
+      "OriginalItemSpec": "wwwroot\\imgs\\products\\40lrldmw.tbe.jpeg"
     },
     {
-      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\sliders\\2hxlzr4s.w23.png",
+      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\4slrctpj.oim.jpg",
       "SourceId": "NinicoFinalTask",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
       "BasePath": "_content/NinicoFinalTask",
-      "RelativePath": "imgs/sliders/2hxlzr4s.w23.png",
+      "RelativePath": "imgs/products/4slrctpj.oim.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -42650,15 +42650,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\sliders\\2hxlzr4s.w23.png"
+      "OriginalItemSpec": "wwwroot\\imgs\\products\\4slrctpj.oim.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\sliders\\fuoqf4zg.li3.png",
+      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\ds0052yh.sdm.jpg",
       "SourceId": "NinicoFinalTask",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
       "BasePath": "_content/NinicoFinalTask",
-      "RelativePath": "imgs/sliders/fuoqf4zg.li3.png",
+      "RelativePath": "imgs/products/ds0052yh.sdm.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -42669,15 +42669,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\sliders\\fuoqf4zg.li3.png"
+      "OriginalItemSpec": "wwwroot\\imgs\\products\\ds0052yh.sdm.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\sliders\\gazknbd0.ttd.jpg",
+      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\products\\nbgwkm3a.b3b.jpg",
       "SourceId": "NinicoFinalTask",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
       "BasePath": "_content/NinicoFinalTask",
-      "RelativePath": "imgs/sliders/gazknbd0.ttd.jpg",
+      "RelativePath": "imgs/products/nbgwkm3a.b3b.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -42688,45 +42688,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\sliders\\gazknbd0.ttd.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\sliders\\p5u1x4lv.fhp.png",
-      "SourceId": "NinicoFinalTask",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
-      "BasePath": "_content/NinicoFinalTask",
-      "RelativePath": "imgs/sliders/p5u1x4lv.fhp.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\sliders\\p5u1x4lv.fhp.png"
-    },
-    {
-      "Identity": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\imgs\\sliders\\zlm4ixe1.ywb.png",
-      "SourceId": "NinicoFinalTask",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\source\\repos\\NinicoFinalTask\\NinicoFinalTask\\wwwroot\\",
-      "BasePath": "_content/NinicoFinalTask",
-      "RelativePath": "imgs/sliders/zlm4ixe1.ywb.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imgs\\sliders\\zlm4ixe1.ywb.png"
+      "OriginalItemSpec": "wwwroot\\imgs\\products\\nbgwkm3a.b3b.jpg"
     }
   ]
 }

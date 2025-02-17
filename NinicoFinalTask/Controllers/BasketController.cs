@@ -43,7 +43,7 @@ namespace NinicoFinalTask.Controllers
             }
             item.Count++;
             Response.Cookies.Append("basket", JsonSerializer.Serialize(BasketItems));
-            return Ok();
+            return Json("Succes");
         }
 
         public async Task<IActionResult> Delete(int id)
@@ -60,10 +60,10 @@ namespace NinicoFinalTask.Controllers
 
             if (item.Count <= 0)
             {
-                basketItems.Remove(item); // Əgər sayı 0 və ya mənfidirsə, siyahıdan sil
+                basketItems.Remove(item); 
             }
 
-            // Yenilənmiş səbəti cookie-yə yaz
+         
             Response.Cookies.Append("basket", JsonSerializer.Serialize(basketItems), new CookieOptions { Expires = DateTime.Now.AddDays(7) });
 
             return RedirectToAction("Index", "Home");

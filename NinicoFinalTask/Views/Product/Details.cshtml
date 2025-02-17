@@ -85,18 +85,48 @@
                 <div class="col-lg-5 col-md-12">
                     <div class="tpproduct-details__nab pr-50 mb-40">
                         <div class="d-flex align-items-start">
-                            @foreach (var item in Model.OtherImagesUrl  ?? [])
-                            {
-                                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                                        <img src="~/imgs/products/@item" alt="">
-                                    </button>
-                                </div>
+                            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                @if (Model.OtherImagesUrl != null && Model.OtherImagesUrl.Any())
+                                {
+                                    @for (int i = 0; i < Model.OtherImagesUrl.Count; i++)
+                                    {
+                                        var item = Model.OtherImagesUrl[i];
+                                        <button class="nav-link @(i == 0 ? "active" : "")"
+                                                id="v-pills-tab-@i"
+                                                data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-img-@i"
+                                                type="button"
+                                                role="tab"
+                                                aria-controls="v-pills-img-@i"
+                                                aria-selected="@(i == 0 ? "true" : "false")">
+                                            <img src="@Url.Content($"~/imgs/products/{item}")" alt="Product Image">
+                                        </button>
+                                    }
+                                }
+                                else
+                                {
+                                    <p>Şəkil yoxdur</p>
+                                }
+                            </div>
 
-                          
-                            }
+                            <div class="tab-content" id="v-pills-tabContent">
+                                @if (Model.OtherImagesUrl != null && Model.OtherImagesUrl.Any())
+                                {
+                                    @for (int i = 0; i < Model.OtherImagesUrl.Count; i++)
+                                    {
+                                        var item = Model.OtherImagesUrl[i];
+                                        <div class="tab-pane fade @(i == 0 ? "show active" : "")"
+                                             id="v-pills-img-@i"
+                                             role="tabpanel"
+                                             aria-labelledby="v-pills-tab-@i">
+                                            <img src="@Url.Content($"~/imgs/products/{item}")" alt="Product Image">
+                                        </div>
+                                    }
+                                }
+                            </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="col-lg-5 col-md-7">
                     <div class="tpproduct-details__content">

@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\assets\img\portfolio\" />
+    <Folder Include="wwwroot\imgs\products\" />
+    <Folder Include="wwwroot\imgs\sliders\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +20,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    <PackageReference Include="Stripe.net" Version="47.3.0" />
   </ItemGroup>
 
 </Project>

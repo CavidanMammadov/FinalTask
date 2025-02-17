@@ -10,7 +10,56 @@ namespace NinicoFinalTask.Controllers
     {
         public async Task<IActionResult> Index()
         {
-            return View();
+            IQueryable<Product> query = _context.Products.Where(x => !x.isDeleted);
+            ProductIndexVM vm = new ProductIndexVM
+            {
+                Products = await query.Select(x => new ProductItemVM
+                {
+                    IsInStock = x.Quantity > 0,
+                    Discount = x.Discount,
+                    Name = x.Name,
+                    ImageUrl = x.CoverImage,
+                    Price = x.SellPrice,
+                    Id = x.Id
+
+
+                }).ToListAsync(),
+                Categories = [new CategoryAndCount { Id = 0, Count = await query.CountAsync(), Name = "All" }]
+
+            };
+            var cats = await _context.Categories.Where(x => !x.isDeleted).Select(x => new CategoryAndCount
+            {
+                Name = x.Name,
+                Id = x.Id,
+                Count = x.Products.Count()
+            }).ToListAsync();
+            vm.Categories.AddRange(cats);
+            return View(vm);
+
+        }
+
+        public async Task<IActionResult> Filter(int? catId = 0, string? price = null, int? minPrice = 10, int? maxPrice = 500)
+        {
+            if (!catId.HasValue) return BadRequest();
+            var query = _context.Products.Where(x => !x.isDeleted && x.SellPrice >= minPrice && x.SellPrice <= maxPrice
+            );
+            if (catId != 0)
+            {
+
+                query = query.Where(x => x.CategoryId == catId);
+            }
+            var data = await query.Select(x => new ProductItemVM
+            {
+                IsInStock = x.Quantity > 0,
+                Discount = x.Discount,
+                Name = x.Name,
+                ImageUrl = x.CoverImage,
+                Price = x.SellPrice,
+                Id = x.Id
+
+
+            }).ToListAsync();
+            return PartialView("_ProductPartial", data);
         }
         public async Task<IActionResult> Details(int? id)
         {
@@ -34,10 +83,11 @@ namespace NinicoFinalTask.Controllers
                 }).ToList();
 
             // Məhsulun əlavə şəkillərini bazadan çəkirik
-            var productImages = _context.ProductImages
+            var productImages =await _context.ProductImages
                 .Where(x => x.ProductId == id)
                 .Select(x => x.ImageUrl)
-                .ToList();
+                .ToListAsync();
+      
 
             var model = new ProductDetailVM
             {
@@ -52,6 +102,7 @@ namespace NinicoFinalTask.Controllers
                 Discount =data.Discount,
                 CategoryName = data.Category!.Name
             };
+            model.OtherImagesUrl = productImages;
 
             return View(model);
         }

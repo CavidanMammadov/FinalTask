@@ -39,6 +39,7 @@ namespace NinicoFinalTask.Controllers
             }).ToListAsync();
             return View(vm);
         }
+       
         public async Task<IActionResult> About()
         {
             return View();

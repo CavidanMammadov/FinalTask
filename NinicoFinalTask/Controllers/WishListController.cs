@@ -17,10 +17,17 @@ namespace NinicoFinalTask.Controllers
             .ToListAsync();
             return View(wishlist);
         }
-        [HttpPost]
         public async Task<IActionResult> AddProduct(int Id)
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             string userId = _userManager.GetUserId(User);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Json("İstifadəçi tapılmadı!");
+            }
             if (!_context.WishLists.Any(x => x.UserId == userId && x.ProductId == Id))
             {
                 var wishlistItem = new WishList
@@ -30,16 +37,16 @@ namespace NinicoFinalTask.Controllers
                 };
 
                 _context.WishLists.Add(wishlistItem);
-                await _context.SaveChangesAsync();
             }
-            return RedirectToAction("Index", "Home");
+            await _context.SaveChangesAsync();
+            return Json("Succes");
         }
-        public async Task<IActionResult> Remove(int productId)
+        public async Task<IActionResult> Remove(int Id)
         {
             string userId = _userManager.GetUserId(User);
 
             var wishlistItem = await _context.WishLists
-                .FirstOrDefaultAsync(w => w.UserId == userId && w.ProductId == productId);
+                .FirstOrDefaultAsync(w => w.UserId == userId && w.ProductId == Id);
 
             if (wishlistItem != null)
             {
