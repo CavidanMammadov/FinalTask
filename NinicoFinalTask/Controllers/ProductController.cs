@@ -82,7 +82,6 @@ namespace NinicoFinalTask.Controllers
                     ImageUrl = x.CoverImage
                 }).ToList();
 
-            // Məhsulun əlavə şəkillərini bazadan çəkirik
             var productImages =await _context.ProductImages
                 .Where(x => x.ProductId == id)
                 .Select(x => x.ImageUrl)

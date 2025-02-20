@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NinicoFinalTask.DataAcces;
 using NinicoFinalTask.Models;
+using NinicoFinalTask.ViewModel.Blog;
 using NinicoFinalTask.ViewModel.Category;
 using NinicoFinalTask.ViewModel.Common;
 using NinicoFinalTask.ViewModel.Product;
@@ -32,6 +33,14 @@ namespace NinicoFinalTask.Controllers
                 Name = x.Name,
                 Price = x.SellPrice
 
+            }).ToListAsync(); 
+            vm.Blogs = await _context.Blogs.Where(x => x.isDeleted == false).Select(x => new BlogItemVM
+            {
+                Title = x.Title,
+                Subtitle = x.SubTitle,
+                Description = x.Description,
+                ImageUrl = x.ImageUrl,
+                CreatedTime = x.CreatedTime
             }).ToListAsync();
             vm.Categories = await _context.Categories.Where(x => x.isDeleted == false).Select(x => new CategoryItemVM
             {

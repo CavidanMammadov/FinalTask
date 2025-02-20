@@ -1,40 +1,41 @@
 ﻿@using NinicoFinalTask.ViewModel.Product
-@model IEnumerable<ProductItemVM>
-@foreach (var item in Model)
+@model List<ProductItemVM>
+
+@if (Model != null && Model.Any())
 {
-    <div class="col-md-4 col-lg-4 col-sm-12">
-        <div class="product">
-            <div class="product__inner">
-                <div class="pro__thumb">
-                    <a href="#">
-                        <img src="~/imgs/products/@item.ImageUrl" width="150" alt="product images">
-                    </a>
-                </div>
-                <div class="product__hover__info">
-                    <ul class="product__action">
-                        <li><a title="Add To Cart"><span class="ti-shopping-cart"></span></a></li>
-                    </ul>
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="@product.ImageUrl" class="card-img-top" alt="@product.Name">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">
+                            Price: $@product.Price
+                            @if (product.Discount > 0)
+                            {
+                                <span class="text-danger">(Save @product.Discount%)</span>
+                            }
+                        </p>
+                        <p class="card-text">
+                            @if (product.IsInStock)
+                            {
+                                <span class="text-success">In Stock</span>
+                            }
+                            else
+                            {
+                                <span class="text-danger">Out of Stock</span>
+                            }
+                        </p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
                 </div>
             </div>
-            <div class="product__details">
-                <h2><a asp-action="Details" asp-controller="Product" asp-route-id="@item.Id">@item.Name</a></h2>
-                @if (item.IsInStock)
-                {
-                    if (item.Discount > 0)
-                    {
-                        <del>$@item.Price</del>
-                        <span class="text-danger">$@(item.Price - item.Price * item.Discount / 100)</span>
-                    }
-                    else
-                    {
-                        <span class="text-danger">$@item.Price</span>
-                    }
-                }
-                else
-                {
-                    <span class="text-danger">Stok yenilənəcək</span>
-                }
-            </div>
-        </div>
+        }
     </div>
+}
+else
+{
+    <div class="alert alert-warning">No products found.</div>
 }

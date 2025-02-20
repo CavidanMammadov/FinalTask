@@ -1,0 +1,84 @@
+﻿@model BlogDetailVm
+@{
+    ViewData["Title"] = Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+
+    <!-- postbox area start -->
+    <div class="postbox-area pt-80 pb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-8 col-xl-8 col-lg-7 col-md-12">
+                    <div class="postbox__wrapper pr-20">
+                        <article class="postbox__item format-image mb-50 transition-3">
+                            <div class="postbox__thumb w-img mb-30">
+                                <img src="@Url.Content("~/imgs/Blogs/" + Model.ImageUrl)" alt="@Model.Title">
+                            </div>
+                            <div class="postbox__content">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="postbox__content postbox__content-area mb-55">
+                                            <div class="postbox__meta mb-15">
+                                                <span><i class="fal fa-clock"></i> @Model.CreatedTime.ToString("MMM dd, yyyy")</span>
+                                                <span><a href="#"><i class="far fa-comment-alt"></i> (04) Comments</a></span>
+                                            </div>
+                                            <h4 class="mb-35">
+                                                @Model.Title
+                                            </h4>
+                                            <p>@Model.Description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    @foreach (var imageUrl in Model.OtherImagesUrl)
+                                    {
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="postbox__meta-img w-img mb-60">
+                                                <img src="@Url.Content("~/imgs/Blogs/" + imageUrl)" alt="Blog Image">
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="col-xxl-4 col-xl-4 col-lg-5 col-md-12">
+                    <div class="sidebar__wrapper pl-25 pb-50">
+                        <div class="sidebar__widget mb-55">
+                            <h3 class="sidebar__widget-title mb-25">Other Blogs</h3>
+                            <div class="sidebar__widget-content">
+                                <div class="sidebar__post rc__post">
+                                    @foreach (var blog in Model.OtherBlogs)
+                                    {
+                                        <div class="rc__post d-flex align-items-center">
+                                            <div class="rc__post-thumb">
+                                                <a href="@Url.Action("BlogDetails", "Blog", new { id = blog.Id })">
+                                                    <img src="@Url.Content("~/imgs/Blogs/" + blog.ImageUrl)" alt="blog-sidebar">
+                                                </a>
+                                            </div>
+                                            <div class="rc__post-content">
+                                                <div class="rc__meta">
+                                                    <span>@blog.CreatedTime.ToString("dd MMMM, yyyy")</span>
+                                                </div>
+                                                <h3 class="rc__post-title">
+                                                    <a href="@Url.Action("BlogDetails", "Blog", new { id = blog.Id })">@blog.Title</a>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- postbox area end -->
+
+</main>
