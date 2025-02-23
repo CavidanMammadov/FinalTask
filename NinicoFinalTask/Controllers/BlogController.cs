@@ -9,6 +9,23 @@ namespace NinicoFinalTask.Controllers
 {
     public class BlogController(NinicoDbContext _context, IWebHostEnvironment _env) : Controller
     {
+        public async Task<IActionResult> Blog()
+        {
+            var blogs = await _context.Blogs
+                .Select(x => new BlogItemVM
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    Subtitle = x.SubTitle,
+                    Description = x.Description,
+                    ImageUrl = x.ImageUrl,
+                    CreatedTime = x.CreatedTime
+                })
+                .ToListAsync();
+
+            return View(blogs);
+        }
+    
         public async Task<IActionResult> BlogDetails(int? id)
         {
             if (id == null)
@@ -54,42 +71,6 @@ namespace NinicoFinalTask.Controllers
 
             return View(model);
         }
-
-        //public async Task<IActionResult> BlogDetails(int? id)
-        //{
-        //    var data = _context.Blogs
-        //         .Include(x => x.Images)
-        //         .FirstOrDefault(p => p.Id == id);
-
-        //    if (data == null)
-        //        return NotFound();
-
-        //    var OtherProducts = _context.Blogs
-        //        .Take(4)
-        //        .Select(x => new BlogItemVM
-        //        {
-        //            Id = x.Id,
-        //            Title = x.Title,
-        //            Subtitle = x.SubTitle,
-        //            ImageUrl = x.ImageUrl
-        //        }).ToList();
-
-        //    var BlogImages = await _context.BlogImages
-        //        .Select(x => x.ImageUrl)
-        //        .ToListAsync();
-
-
-        //    var model = new BlogDetailVm
-        //    {
-        //        Id = data.Id,
-        //        Title = data.Title,
-        //        Description = data.Description,
-        //        ImageUrl = data.ImageUrl,
-        //    };
-        //    model.OtherImagesUrl = BlogImages;
-
-        //    return View(model);
-        //}
 
     }
 }

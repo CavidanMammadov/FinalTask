@@ -9,6 +9,7 @@
         public int  Quantity { get; set; }
         public int Discount { get; set; }
         public string CoverImage { get; set; } = null!;
+        public ICollection<Tag> Tags { get; set; }
         public int? CategoryId { get; set; }
         public Category? Category { get; set; }
         public List<ProductImage>? Images { get; set; }

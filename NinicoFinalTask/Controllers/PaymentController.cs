@@ -10,7 +10,6 @@ namespace NinicoFinalTask.Controllers
 {
     public class PaymentController(PaymentService _payment , OrderService _orderService) : Controller
     {
-        [HttpPost]
         public async Task<IActionResult> Checkout()
         {
             string basketJson = Request.Cookies["Basket"];
@@ -54,23 +53,7 @@ namespace NinicoFinalTask.Controllers
             ViewBag.Message = "Payment canceled";
             return View();
         }
-        public async Task<IActionResult> Webhook()
-        {
-            var json = await new StreamReader(HttpContext.Request.Body).ReadToEndAsync();
-            var stripeEvent = EventUtility.ConstructEvent(json, Request.Headers["Stripe-Signature"], "STRIPE_SECRET_WEBHOOK_KEY");
-
-            if (stripeEvent.Type == "checkout.session.completed")
-            {
-                var session = stripeEvent.Data.Object as Stripe.Checkout.Session;
-                if (session != null && session.CustomerEmail != null)
-                {
-                    await _orderService.ConfirmOrderAsync(session.CustomerEmail);
-                }
-            }
-
-            return Ok();
-        }
-
+      
 
 
     }

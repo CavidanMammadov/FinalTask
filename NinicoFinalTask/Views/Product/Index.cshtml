@@ -1,127 +1,108 @@
-﻿@using NinicoFinalTask.ViewModel.Product
-@model ProductIndexVM
-@{
-    ViewData["Title"] = "Index";
-}
-<div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(images/bg/2.jpg) no-repeat scroll center center / cover ;">
-    <div class="ht__bradcaump__wrap">
+﻿<main>
+    <!-- product-area-start -->
+    <div class="product-area pt-70 pb-20">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <div class="bradcaump__inner text-center">
-                        <h2 class="bradcaump-title">Shop Sidebar</h2>
-                        <nav class="bradcaump-inner">
-                            <a class="breadcrumb-item" href="index.html">Home</a>
-                            <span class="brd-separetor">/</span>
-                            <span class="breadcrumb-item active">Shop Sidebar</span>
-                        </nav>
+                <!-- Sidebar -->
+                <div class="col-lg-2 col-md-12">
+                    <div class="tpsidebar product-sidebar__product-category">
+                        <div class="product-sidebar">
+                            <!-- Category Filter -->
+                            <div class="product-sidebar__widget mb-30">
+                                <div class="product-sidebar__info product-info-list">
+                                    <h4 class="product-sidebar__title mb-25">Category</h4>
+                                    <ul class="sidebar__list">
+                                        @foreach (var item in Model.Categories)
+                                        {
+                                            <li>
+                                                <input type="checkbox" class="category-filter" value="@item.Id"> @item.Name (@item.Count)
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Price Filter -->
+                            <div class="product-sidebar__widget mb-30">
+                                <div class="product-sidebar__info product-info-list">
+                                    <h4 class="product-sidebar__title mb-30">Filter</h4>
+                                    <div class="productsidebar__range">
+                                        <input type="range" id="minPrice" min="10" max="500" value="10">
+                                        <input type="range" id="maxPrice" min="10" max="500" value="500">
+                                        <p>Price: <span id="priceRange">$10 - $500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Bradcaump area -->
-<!-- Start Our ShopSide Area -->
-<section class="htc__shop__sidebar bg__white ptb--120">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-lg-3 order-lg-1 order-2 col-sm-12">
-                <div class="htc__shop__left__sidebar">
-                    <!-- Start Range -->
-                    <div class="htc-grid-range">
-                        <h4 class="section-title-4">FILTER BY PRICE</h4>
-                        <div class="content-shopby">
-                            <div class="price_filter s-filter clear">
-                                <form action="#" method="GET">
-                                    <div id="slider-range"></div>
-                                    <div class="slider__range--output">
-                                        <div class="price__output--wrap">
-                                            <div class="price--output">
-                                                <span>Price :</span><input type="text" id="amount" readonly>
-                                            </div>
-                                            <div class="price--filter">
-                                                <a href="#">Filter</a>
+                <!-- Products -->
+                <div class="col-lg-10 col-md-12">
+                    <div class="row row-cols-xxl-4 row-cols-xl-4 row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-1 tpproduct">
+                        @foreach (var product in Model.Products)
+                        {
+                            <div class="col">
+                                <div class="tpproduct tpproductitem mb-15 p-relative">
+                                    <div class="tpproduct__thumb">
+                                        <a href="/Product/Details/@product.Id">
+                                            <img src="~/imgs/products/@product.ImageUrl" alt="@product.Name">
+                                        </a>
+                                    </div>
+                                    <div class="tpproduct__content-area">
+                                        <h3 class="tpproduct__title mb-5">
+                                            <a href="/Product/Details/@product.Id">@product.Name</a>
+                                        </h3>
+                                        <div class="tpproduct__priceinfo p-relative">
+                                            <div class="tpproduct__ammount">
+                                                @if (product.Discount > 0)
+                                                {
+                                                    <span style="text-decoration: line-through; color: red;">$@product.Price</span>
+                                                    <span>$@(product.Price - product.Discount)</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>$@product.Price</span>
+                                                }
                                             </div>
                                         </div>
+                                        <a asp-action="card" asp-controller="Basket"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Range -->
-                    <div class="htc__shop__cat">
-                        <h4 class="section-title-4">PRODUCT CATEGORIES</h4>
-                        <ul class="sidebar__list">
-                            @foreach (var item in Model.Categories)
-                            {
-                                <li class="cat-class" cat-id="@item.Id">@item.Name <span>@item.Count</span></li>
-                            }
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-9 order-lg-2 order-1 col-sm-12 col-xs-12 smt-30">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                        <div class="producy__view__container">
-                            <!-- Start Short Form -->
-                            <div class="product__list__option">
-                                <div class="order-single-btn">
-                                    <select class="select-color selectpicker">
-                                        <option>Sort by newness</option>
-                                        <option>Match</option>
-                                        <option>Updated</option>
-                                        <option>Title</option>
-                                        <option>Category</option>
-                                        <option>Rating</option>
-                                    </select>
-                                </div>
-                                <div class="shp__pro__show">
-                                    <span>Showing 1 - 4 of 25 results</span>
                                 </div>
                             </div>
-                            <!-- End Short Form -->
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-contet shop__grid__view__wrap">
-                    <!-- Start Single View -->
-                    <div role="tabpanel" id="grid-view" class="row single-grid-view tab-pane active clearfix">
-                        <partial name="_ProductPartial" model="Model.Products">
+                        }
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+    <!-- product-area-end -->
+</main>
+
 @section scripts {
     <script>
-        let catId = 0;
-        let minPrice = 10;
-        let maxPrice = 400;
-        function getDatas() {
-            fetch('/Product/Filter?catId=' + catId + '&minPrice=' + minPrice + '&maxPrice=' + maxPrice)
-                .then(x => x.text())
-                .then(x => $('#grid-view').html(x));
-        }
-        $(".cat-class").click(function () {
-            catId = $(this).attr("cat-id");
-            getDatas();
-        });
-        $("#slider-range").slider({
-            range: true,
-            min: 1,
-            max: 12000,
-            values: [minPrice, maxPrice],
-            slide: function (event, ui) {
-                minPrice = ui.values[0];
-                maxPrice = ui.values[1];
-                getDatas();
-                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+        $(document).ready(function () {
+            $(".add-to-cart").click(function () {
+                let productId = $(this).data("id");
+                fetch(`/Basket/AddProduct?id=${productId}`)
+                    .then(response => response.text())
+                    .then(() => alert("Məhsul səbətə əlavə edildi"));
+            });
+
+            $("#minPrice, #maxPrice").on("input", function () {
+                let minPrice = $("#minPrice").val();
+                let maxPrice = $("#maxPrice").val();
+                $("#priceRange").text(`$${minPrice} - $${maxPrice}`);
+                getFilteredProducts();
+            });
+
+            function getFilteredProducts() {
+                let minPrice = $("#minPrice").val();
+                let maxPrice = $("#maxPrice").val();
+                let catId = $(".category-filter:checked").map(function () { return this.value; }).get();
+
+                fetch(`/Product/Filter?catId=${catId}&minPrice=${minPrice}&maxPrice=${maxPrice}`)
+                    .then(response => response.text())
+                    .then(data => $(".tpproduct").html(data));
             }
         });
     </script>
 }
-
-

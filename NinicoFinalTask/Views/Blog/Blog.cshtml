@@ -1,0 +1,40 @@
+﻿
+@model List<BlogItemVM>
+@{
+    ViewData["Title"] = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main>
+    <div class="blog-area pt-80 pb-60">
+        <div class="container">
+            <div class="row">
+                @foreach (var blog in Model)
+                {
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="blog__item mb-40">
+                            <div class="blog__thumb w-img mb-20">
+                                <a href="@Url.Action("BlogDetails", "Blog", new { id = blog.Id })">
+                                    <img src="@Url.Content("~/imgs/Blogs/" + blog.ImageUrl)" alt="@blog.Title">
+                                </a>
+                            </div>
+                            <div class="blog__content">
+                                <div class="blog__meta mb-15">
+                                    <span><i class="fal fa-clock"></i> @blog.CreatedTime.ToString("MMM dd, yyyy")</span>
+                                </div>
+                                <h3 class="blog__title">
+                                    <a href="@Url.Action("BlogDetails", "Blog", new { id = blog.Id })">@blog.Title</a>
+                                </h3>
+                                <p>
+                                    @(string.IsNullOrEmpty(blog.Description) ? "No description available."
+                                        : blog.Description.Length > 150 ? blog.Description.Substring(0, 150) + "..."
+                                        : blog.Description)
+                                </p>
+                                <a href="@Url.Action("BlogDetails", "Blog", new { id = blog.Id })" class="blog-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</main>

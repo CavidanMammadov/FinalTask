@@ -6,6 +6,7 @@ using NinicoFinalTask.Helpers;
 using NinicoFinalTask.Models;
 using NinicoFinalTask.Services.Abstracts;
 using NinicoFinalTask.Services.Implements;
+using Stripe;
 using System.Configuration;
 
 namespace NinicoFinalTask
@@ -39,7 +40,6 @@ namespace NinicoFinalTask
             }).AddDefaultTokenProviders().AddEntityFrameworkStores<NinicoDbContext>();
 
             builder.Services.AddScoped<IEmailService , EmailService>();
-
 
 
             builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection(SmtpOptions.Name));
