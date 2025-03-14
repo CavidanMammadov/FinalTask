@@ -19,7 +19,7 @@
                         @foreach (var item in Model.Categories)
                         {
                             <ul class="cat-menu__list">
-                                <li><a href="shop-2.html"><i class="fal fa-chair"></i> @item.Name</a></li>
+                                <li><a asp-action="Index" asp-controller="Product"><i class="fal fa-chair"></i> @item.Name</a></li>
 
                             </ul>
                         }
@@ -32,25 +32,25 @@
                 <div class="main-menu">
                     <nav id="mobile-menu">
                         <ul>
-                            <li class="has-dropdown">
-                                <a asp-action="Index" asp-controller="Home" >Home</a>
-                               
+                            <li>
+                                <a asp-action="Index" asp-controller="Home">Home</a>
+
                             </li>
                             <li class="has-dropdown">
-                                <a href="shop.html">Shop</a>
+                                <a asp-action="Index" asp-controller="Product">Shop</a>
                                 <ul class="submenu">
-                                    <li><a asp-action="Index" asp-controller="Product" >Shop</a></li>
+                                    <li><a asp-action="Index" asp-controller="Product">Shop</a></li>
                                     <li><a href="shop-location.html">Shop Location</a></li>
                                     <li><a asp-action="card" asp-controller="Basket">Cart</a></li>
-                                    <li><a asp-action="Login" asp-controller="Account" >Sign In</a></li>
+                                    <li><a asp-action="Login" asp-controller="Account">Sign In</a></li>
                                     <li><a asp-action="Checkout " asp-controller="Payment">Checkout</a></li>
-                                    <li><a asp-action="wishlist" asp-controller ="Wishlist">Wishlist</a></li>
+                                    <li><a asp-action="wishlist" asp-controller="Wishlist">Wishlist</a></li>
                                 </ul>
                             </li>
-                            
-                            <li class="has-dropdown">
+
+                            <li>
                                 <a asp-action="Blog" asp-controller="Blog">Blog</a>
-                               
+
                             </li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
@@ -66,9 +66,7 @@
                                 <div class="menu-contact__icon">
                                     <i class="fal fa-map-marker-alt"></i>
                                 </div>
-                                <div class="menu-contact__info">
-                                    <a href="shop-location.html">Find Store</a>
-                                </div>
+                               
                             </div>
                         </li>
                     </ul>
@@ -92,71 +90,24 @@
                 <div class="main-menu">
                     <nav>
                         <ul>
-                            <li class="has-dropdown">
-                                <a href="index.html">Home</a>
+                            <li >
+                                <a asp-action="Index" asp-controller="Index">Home</a>
                                 <ul class="submenu">
-                                    <li><a href="index.html">Wooden  Home</a></li>
-                                    <li><a href="index-2.html">Fashion Home</a></li>
-                                    <li><a href="index-3.html">Furniture Home</a></li>
-                                    <li><a href="index-4.html">Cosmetics Home</a></li>
-                                    <li><a href="index-5.html">Food Grocery</a></li>
                                 </ul>
                             </li>
                             <li class="has-dropdown">
                                 <a href="shop.html">Shop</a>
                                 <ul class="submenu">
                                     <li><a href="shop.html">Shop</a></li>
-                                    <li><a href="shop-2.html">Shop 2</a></li>
-                                    <li><a href="shop-details.html">Shop Details </a></li>
-                                    <li><a href="shop-details-2.html">Shop Details 2</a></li>
-                                    <li><a href="shop-location.html">Shop Location</a></li>
                                     <li><a asp-action="card" asp-controller="Basket">Cart</a></li>
-                                    <li><a href="sign-in.html">Sign In</a></li>
+                                    <li><a  asp-action="login" asp-controller="Account">Sign In</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a asp-action="wishlist" asp-controller ="Wishlist">Wishlist</a></li>
-                                    <li><a href="track.html">Product Track</a></li>
+                                    <li><a asp-action="wishlist" asp-controller="Wishlist">Wishlist</a></li>
                                 </ul>
                             </li>
-                            <li class="has-dropdown has-megamenu">
-                                <a href="about.html">Pages</a>
-                                <ul class="submenu mega-menu">
-                                    <li>
-                                        <a class="mega-menu-title">Page layout</a>
-                                        <ul>
-                                            <li><a href="shop.html">Shop filters v1</a></li>
-                                            <li><a href="shop-2.html">Shop filters v2</a></li>
-                                            <li><a href="shop-details.html">Shop sidebar</a></li>
-                                            <li><a href="shop-details-2.html">Shop Right sidebar</a></li>
-                                            <li><a href="shop-location.html">Shop List view</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="mega-menu-title">Page layout</a>
-                                        <ul>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a asp-action="card" asp-controller="Basket">Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="sign-in.html">Sign In</a></li>
-                                            <li><a href="sign-in.html">Log In</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="mega-menu-title">Page type</a>
-                                        <ul>
-                                            <li><a href="track.html">Product Track</a></li>
-                                            <li><a asp-action="wishlist" asp-controller ="Wishlist">Wishlist</a></li>
-                                            <li><a href="error.html">404 / Error</a></li>
-                                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-dropdown">
-                                <a asp-action=""Blog" asp-controller="Blog">Blog</a>
-                                <ul class="submenu">
-                                    <li><a asp-action=""Blog" asp-controller="Blog">Blog</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
+                            <li>
+                                <a asp-action="Blog" asp-controller="Blog">Blog</a>
+
                             </li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
@@ -178,7 +129,7 @@
                                 <a asp-action="LogOut" asp-controller="Account">
                                     <span class="ti-shift-right"></span>
                                 </a>
-                                <a asp-action="Wishlist", asp-controller="Wishlist"><i class="fal fa-heart"></i></a>
+                                <a asp-action="Wishlist" , asp-controller="Wishlist"><i class="fal fa-heart"></i></a>
                             </li>
                         }
                         else
@@ -231,13 +182,16 @@
                         </form>
                     </div>
                     <div class="header-meta__social d-flex align-items-center ml-25">
-                        <button class="header-cart p-relative tp-cart-toggle">
-                            <i class="fal fa-shopping-cart"></i>
-                            <span>2</span>
-                        </button>
+                        <form asp-action="Cart" asp-controller="Basket" method="get" class="d-inline">
+                            <button type="submit" class="header-cart p-relative tp-cart-toggle">
+                                <i class="fal fa-shopping-cart"></i>
+                                <span></span>
+                            </button>
+                        </form>
                         <a href="sign-in.html"><i class="fal fa-user"></i></a>
-                        <a asp-action="wishlist" asp-controller ="Wishlist"><i class="fal fa-heart"></i></a>
+                        <a asp-action="wishlist" asp-controller="Wishlist"><i class="fal fa-heart"></i></a>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -264,7 +218,7 @@
                                 <i class="fal fa-shopping-cart"></i>
                                 <span>2</span>
                             </button>
-                            <a href="sign-in.html"><i class="fal fa-user"></i></a>
+                            <a asp-action="Index" asp-controller="" ><i class="fal fa-user"></i></a>
                         </div>
                     </div>
                 </div>
@@ -324,13 +278,12 @@
         <a href="sign-in.html"><i class="fal fa-user"></i> Login / Register</a>
     </div>
     <div class="tpsideinfo__wishlist-link">
-        <a asp-action="wishlist" asp-controller ="Wishlist" target="_parent"><i class="fal fa-heart"></i> Wishlist</a>
+        <a asp-action="wishlist" asp-controller="Wishlist" target="_parent"><i class="fal fa-heart"></i> Wishlist</a>
     </div>
 </div>
 <div class="body-overlay"></div>
 <!-- sidebar-menu-area-end -->
 <!-- header-cart-start -->
-
 <!-- main-area-start -->
 <main>
 
@@ -348,7 +301,7 @@
                                             <h3 class="tpslidertwo__title mb-10">@item.Title</h3>
                                             <p>@item.SubTitle</p>
                                             <div class="tpslidertwo__slide-btn d-flex align-items-center">
-                                                <a class="tp-btn banner-animation mr-25" href="@item.Link">
+                                                <a class="tp-btn banner-animation mr-25" asp-action="Index" asp-controller="Product">
                                                     Shop Now <i class="fal fa-long-arrow-right"></i>
                                                 </a>
                                                 <span>Start From <br> <b>$@item.StartPrice</b></span>
@@ -358,9 +311,6 @@
                                     <div class="col-xl-5 col-lg-6 col-md-6 d-none d-md-block">
                                         <div class="tpsliderthree__img p-relative text-end pt-55">
                                             <img src="~/imgs/sliders/@item.ImageUrl" alt="">
-                                            <div class="tpslidertwo__img-shape">
-                                                <img src="~/imgs/sliders/@item.ImageUrl" alt="tag">
-                                            </div>
                                         </div>
 
                                     </div>
@@ -370,7 +320,7 @@
                     }
                 </div>
             </div>
-            <div class="greenslider-pagination"></div>
+            <div class="greenslider-pagination"></divcategories
         </div>
     </section>
 
@@ -452,7 +402,7 @@
                                         aria-selected="true">
                                     All
                                 </button>
-                               
+
                             </div>
                         </nav>
                     </div>
@@ -468,7 +418,7 @@
                                 <div class="tpproduct pb-15 mb-30">
                                     <div class="tpproduct__thumb p-relative">
                                         <a asp-action="Details" asp-controller="Product" asp-route-id="@item.Id">
-                                            <img src="~/imgs/products/@item.ImageUrl" alt="product-thumb">
+                                            <img width="150" src="~/imgs/products/@item.ImageUrl" alt="product-thumb">
                                             <img class="product-thumb-secondary" src="assets/img/product/home-three/product-42.jpg" alt="product-thumb">
                                         </a>
                                         <div class="tpproduct__thumb-action">
@@ -520,9 +470,8 @@
         </div>
     </section>
     <!-- product-area-end -->
-   >
+    >
     <!-- white-product-area-start -->
-  
     <!-- brand-area-start -->
     <section class="brand-area tpbrand black-bg-2 pt-65 pb-60">
         <div class="container">
@@ -585,19 +534,19 @@
                                     </ul>
                                 </div>
                                 <h4 class="blogitem__title mb-15">
-                                    <a href="blog-details.html">@item.Title</a>
+                                    <a asp-action="BlogDetails" asp-controller="Blog" asp-route-id="@item.Id">@item.Title</a>
                                 </h4>
                                 <div class="blogitem__btn">
-                                    <a href="blog-details.html">Read More</a>
+                                    <a asp-action="BlogDetails" asp-controller="Blog" asp-route-id="@item.Id">Read More</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                 }
-               
-             
-              
+
+
+
             </div>
         </div>
     </section>
@@ -605,42 +554,42 @@
 
 </main>
 @section scripts
-    {
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
-                integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
-                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script>
-            $('.addcart').click(function () {
-                fetch('/Basket/AddBasket/' + $(this).attr('prod-id'))
-                    .then(x => {
-                        if (x.ok) {
-                            Command: toastr["success"]("Məhsul səbətə əlavə olundu")
-                                toastr.options = {
-                                "closeButton": false,
-                                "debug": false,
-                                "newestOnTop": false,
-                                "progressBar": false,
-                                "positionClass": "toast-top-right",
-                                "preventDuplicates": false,
-                                "onclick": null,
-                                "showDuration": "300",
-                                "hideDuration": "1000",
-                                "timeOut": "5000",
-                                "extendedTimeOut": "1000",
-                                "showEasing": "swing",
-                                "hideEasing": "linear",
-                                "showMethod": "fadeIn",
-                                "hideMethod": "fadeOut"
-                            }
-                            fetch('/Basket/GetBasket/')
-                                .then(x => x.text())
-                                .then(x => {
-                                    $('.shopping__cart').html(x);
-
-                                });
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+            integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.addcart').click(function () {
+            fetch('/Basket/AddBasket/' + $(this).attr('prod-id'))
+                .then(x => {
+                    if (x.ok) {
+                        Command: toastr["success"]("Məhsul səbətə əlavə olundu")
+                        toastr.options = {
+                            "closeButton": false,
+                            "debug": false,
+                            "newestOnTop": false,
+                            "progressBar": false,
+                            "positionClass": "toast-top-right",
+                            "preventDuplicates": false,
+                            "onclick": null,
+                            "showDuration": "300",
+                            "hideDuration": "1000",
+                            "timeOut": "5000",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
                         }
-                    })
-            })
-        </script>
+                        fetch('/Basket/GetBasket/')
+                            .then(x => x.text())
+                            .then(x => {
+                                $('.shopping__cart').html(x);
 
-    }
+                            });
+                    }
+                })
+        })
+    </script>
+
+}

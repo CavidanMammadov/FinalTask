@@ -58,20 +58,81 @@
                     <div class="col-xl-10 col-lg-9">
                         <div class="header-meta-info d-flex align-items-center justify-content-between">
                             <div class="header-search-bar">
-                                <form action="#">
+                                <form id="searchForm">
                                     <div class="search-info p-relative">
-                                        <button class="header-search-icon"><i class="fal fa-search"></i></button>
-                                        <input type="text" placeholder="Search products...">
+                                        <button type="submit" class="header-search-icon">
+                                            <i class="fal fa-search"></i>
+                                        </button>
+                                        <input type="text" id="searchInput" placeholder="Search products...">
                                     </div>
                                 </form>
+                                <div id="searchResults" class="search-results"></div>
                             </div>
+
+                            <style>
+                                .search-results {
+                                    position: absolute;
+                                    background: white;
+                                    width: 100%;
+                                    max-height: 300px;
+                                    overflow-y: auto;
+                                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                                    z-index: 1000;
+                                }
+
+                                    .search-results p {
+                                        padding: 10px;
+                                        border-bottom: 1px solid #ddd;
+                                        margin: 0;
+                                        cursor: pointer;
+                                    }
+
+                                        .search-results p:hover {
+                                            background: #f5f5f5;
+                                        }
+                            </style>
+
+                            <script>
+                                document.getElementById("searchInput").addEventListener("input", function () {
+                                    let query = this.value.trim();
+                                    if (query.length < 2) {
+                                        document.getElementById("searchResults").innerHTML = "";
+                                        return;
+                                    }
+
+                                    fetch(`/Product/Search?query=${query}`)
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            let resultsDiv = document.getElementById("searchResults");
+                                            resultsDiv.innerHTML = "";
+
+                                            if (data.message) {
+                                                resultsDiv.innerHTML = `<p>${data.message}</p>`;
+                                            } else {
+                                                data.forEach(product => {
+                                                    resultsDiv.innerHTML += `<p onclick="location.href='/Product/Details/${product.id}'">
+                                                            ${product.name} - ${product.price}₼
+                                                        </p>`;
+                                                });
+                                            }
+                                        });
+                                });
+
+                                document.getElementById("searchForm").addEventListener("submit", function (e) {
+                                    e.preventDefault();
+                                });
+                            </script>
+
 
 
                             <div class="header-meta__social d-flex align-items-center ml-25">
-                                <button class="header-cart p-relative tp-cart-toggle">
-                                    <i class="fal fa-shopping-cart"></i>
-                                    <span>2</span>
-                                </button>
+                                <form asp-action="Card" asp-controller="Basket" method="get" class="d-inline">
+                                    <button type="submit" class="header-cart p-relative tp-cart-toggle">
+                                        <i class="fal fa-shopping-cart"></i>
+                                        <span></span>
+                                    </button>
+                                </form>
+
                                 @if (Context.User.Identity?.IsAuthenticated == true)
                                 {
                                     <li>
@@ -159,10 +220,12 @@
                 <div class="col-xl-4 col-lg-9">
                     <div class="header-meta-info d-flex align-items-center justify-content-end">
                         <div class="header-meta__social  d-flex align-items-center">
-                            <button class="header-cart p-relative tp-cart-toggle">
-                                <i class="fal fa-shopping-cart"></i>
-                                <span class="tp-product-count">2</span>
-                            </button>
+                            <form asp-action="Card" asp-controller="Basket" method="get" class="d-inline">
+                                <button type="submit" class="header-cart p-relative tp-cart-toggle">
+                                    <i class="fal fa-shopping-cart"></i>
+                                    <span></span>
+                                </button>
+                            </form>
                             @if (Context.User.Identity?.IsAuthenticated == true)
                             {
 

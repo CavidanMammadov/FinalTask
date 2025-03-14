@@ -43,7 +43,7 @@ namespace NinicoFinalTask.Controllers
             }
             item.Count++;
             Response.Cookies.Append("basket", JsonSerializer.Serialize(BasketItems));
-            return Json("Succes");
+            return RedirectToAction("Card","Basket");
         }
 
         public async Task<IActionResult> Delete(int id)

@@ -6,11 +6,11 @@ using NinicoFinalTask.Models;
 
 namespace NinicoFinalTask.Controllers
 {
-    public class WishListController(NinicoDbContext _context , UserManager<User> _userManager) : Controller
+    public class WishListController(NinicoDbContext _context, UserManager<User> _userManager) : Controller
     {
-        public async  Task<IActionResult> Wishlist( )
+        public async Task<IActionResult> Wishlist()
         {
-            string userId =  _userManager.GetUserId(User);
+            string userId = _userManager.GetUserId(User);
             var wishlist = await _context.WishLists
             .Where(w => w.UserId == userId)
             .Include(w => w.Product)
@@ -32,21 +32,29 @@ namespace NinicoFinalTask.Controllers
             {
                 var wishlistItem = new WishList
                 {
-                    UserId = userId, 
+                    UserId = userId,
                     ProductId = Id
                 };
 
                 _context.WishLists.Add(wishlistItem);
             }
             await _context.SaveChangesAsync();
-            return Json("Succes");
+            return RedirectToAction("Wishlist", "Wishlist");
         }
         public async Task<IActionResult> Remove(int Id)
         {
-            string userId = _userManager.GetUserId(User);
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
 
-            var wishlistItem = await _context.WishLists
-                .FirstOrDefaultAsync(w => w.UserId == userId && w.ProductId == Id);
+            string userId = _userManager.GetUserId(User);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Json("İstifadəçi tapılmadı!");
+            }
+
+            var wishlistItem = _context.WishLists.FirstOrDefault(x => x.UserId == userId && x.ProductId == Id);
 
             if (wishlistItem != null)
             {
@@ -54,7 +62,8 @@ namespace NinicoFinalTask.Controllers
                 await _context.SaveChangesAsync();
             }
 
-            return Ok();
+            return RedirectToAction("Wishlist", "Wishlist");
         }
+
     }
 }

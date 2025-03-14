@@ -37,7 +37,7 @@ namespace NinicoFinalTask.Controllers
             return View(vm);
 
         }
-
+        [HttpGet]
         public async Task<IActionResult> Filter(int? catId = 0, string? price = null, int? minPrice = 10, int? maxPrice = 500)
         {
             if (!catId.HasValue) return BadRequest();
@@ -105,7 +105,25 @@ namespace NinicoFinalTask.Controllers
 
             return View(model);
         }
+        public async Task<IActionResult> Search(string query)
+        {
+            if (string.IsNullOrEmpty(query))
+            {
+                return Json(new { message = "Axtarış sorğusu boş ola bilməz!" });
+            }
 
+            var products = await _context.Products
+                .Where(p => p.Name.Contains(query))
+                .Select(p => new { p.Id, p.Name }) 
+                .ToListAsync();
+
+            if (!products.Any())
+            {
+                return Json(new { message = "Uyğun məhsul tapılmadı!" });
+            }
+
+            return Json(products);
+        }
 
 
     }

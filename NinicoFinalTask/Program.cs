@@ -23,7 +23,7 @@ namespace NinicoFinalTask
             {
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("MsSql"));
             });
-
+            builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
             builder.Services.AddIdentity<User, IdentityRole>(opt =>
             {
@@ -53,7 +53,7 @@ namespace NinicoFinalTask
 
 
             var app = builder.Build();
-
+            StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {

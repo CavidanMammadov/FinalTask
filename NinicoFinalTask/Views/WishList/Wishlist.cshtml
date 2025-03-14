@@ -1,7 +1,7 @@
 ﻿@model List<WishList>
 
 <div class="container mt-5">
-    <h2 class="mb-4">❤️ Mənim Wishlist-im</h2>
+    <h2 class="mb-4"> Mənim Wishlist-im</h2>
 
     @if (!Model.Any())
     {
@@ -29,7 +29,7 @@
                         <td>@item.Product.SellPrice.ToString("0.00") AZN</td>
                         <td>
                             <a asp-action="AddBasket" asp-controller="Basket" asp-route-id="@item.Id" class="btn btn-success">➕ Səbətə əlavə et</a>
-                            <a  asp-action="remove" asp-controller="Wishlist" asp-route-id="@item.Id" class="btn btn-danger">❌ Sil</a>
+                 <a  asp-action="Remove" asp-controller="Wishlist" asp-route-id="@item.Id" class="btn btn-danger"> Sil</a>
                         </td>
                     </tr>
                 }

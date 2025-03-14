@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Ödəniş Səhifəsi";
+}
+
+<h2>Ödəniş Səhifəsi</h2>
+<button id="checkout-button">Ödənişi Tamamla</button>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    var stripe = Stripe("@ViewBag.PublishableKey"); // Razor vasitəsilə Stripe açarını alırıq
+    var checkoutButton = document.getElementById("checkout-button");
+
+    checkoutButton.addEventListener("click", function () {
+        fetch("/Checkout/CreateCheckoutSession", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" }
+        })
+            .then(response => response.json())
+            .then(session => {
+                return stripe.redirectToCheckout({ sessionId: session.id });
+            })
+            .catch(error => console.error("Error:", error));
+    });
+</script>

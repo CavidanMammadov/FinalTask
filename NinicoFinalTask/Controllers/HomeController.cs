@@ -36,6 +36,7 @@ namespace NinicoFinalTask.Controllers
             }).ToListAsync(); 
             vm.Blogs = await _context.Blogs.Where(x => x.isDeleted == false).Select(x => new BlogItemVM
             {
+                Id = x.Id,
                 Title = x.Title,
                 Subtitle = x.SubTitle,
                 Description = x.Description,

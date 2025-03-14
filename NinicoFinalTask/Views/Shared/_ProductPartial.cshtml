@@ -6,29 +6,31 @@
     <div class="row">
         @foreach (var product in Model)
         {
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="@product.ImageUrl" class="card-img-top" alt="@product.Name">
-                    <div class="card-body">
-                        <h5 class="card-title">@product.Name</h5>
-                        <p class="card-text">
-                            Price: $@product.Price
-                            @if (product.Discount > 0)
-                            {
-                                <span class="text-danger">(Save @product.Discount%)</span>
-                            }
-                        </p>
-                        <p class="card-text">
-                            @if (product.IsInStock)
-                            {
-                                <span class="text-success">In Stock</span>
-                            }
-                            else
-                            {
-                                <span class="text-danger">Out of Stock</span>
-                            }
-                        </p>
-                        <a href="#" class="btn btn-primary">View Details</a>
+            <div class="col">
+                <div class="tpproduct tpproductitem mb-15 p-relative">
+                    <div class="tpproduct__thumb">
+                        <a href="/Product/Details/@product.Id">
+                            <img src="/imgs/products/@product.ImageUrl" alt="@product.Name">
+                        </a>
+                    </div>
+                    <div class="tpproduct__content-area">
+                        <h3 class="tpproduct__title mb-5">
+                            <a href="/Product/Details/@product.Id">@product.Name</a>
+                        </h3>
+                        <div class="tpproduct__priceinfo p-relative">
+                            <div class="tpproduct__ammount">
+                                @if (product.Discount > 0)
+                                {
+                                    <span style="text-decoration: line-through; color: red;">$@product.Price</span>
+                                    <span>$@(product.Price - product.Discount)</span>
+                                }
+                                else
+                                {
+                                    <span>$@product.Price</span>
+                                }
+                            </div>
+                        </div>
+                        <a asp-action="AddBasket" asp-controller="Basket" asp-route-id="@product.Id" class="add-to-cart"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
                     </div>
                 </div>
             </div>

@@ -30,7 +30,7 @@ namespace NinicoFinalTask.Extensions
                         Email = "admin@gmail.com",
                         ProfileImageUrl = "photo.jpg"
                     };
-                    userManager.CreateAsync(u, "123").Wait();
+                    userManager.CreateAsync(u, "1234").Wait();
                     userManager.AddToRoleAsync(u, nameof(Roles.Admin)).Wait();
 
                 }

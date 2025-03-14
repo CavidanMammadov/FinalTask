@@ -1,7 +1,27 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
-}
+﻿@model IEnumerable<Order>
 
-<h1>Index</h1>
+<h2>Ödənilmiş Sifarişlər</h2>
 
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>İstifadəçi</th>
+            <th>Məbləğ</th>
+            <th>Ödəniş Tarixi</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.Id</td>
+                <td>@order.UserId</td>
+                <td>@order.TotalAmount $</td>
+                <td>@order.PaymentDate.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@order.PaymentStatus</td>
+            </tr>
+        }
+    </tbody>
+</table>
